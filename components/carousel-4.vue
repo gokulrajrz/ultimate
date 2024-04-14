@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useDisplay } from "vuetify";
 
-export default (await import("vue")).defineComponent({
+export default defineComponent({
   setup() {
     const { smAndDown, md } = useDisplay();
 
