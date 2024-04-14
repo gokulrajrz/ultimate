@@ -1,5 +1,5 @@
 <template>
-  <v-carousel :show-arrows="false" height="350px" hide-delimiter-background cycle>
+  <v-carousel :show-arrows="false" height="350px" hide-delimiter-background cycle class="px-[10px]">
     <v-carousel-item v-for="(review, i) in reviews" :key="i">
       <div class="h-full flex flex-col items-center justify-center">
         <div class="h-[90px] w-[90px]">

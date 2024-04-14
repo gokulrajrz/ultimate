@@ -2,6 +2,7 @@
   <NuxtLayout>
     <v-app class="bg-backgroundGrey">
       <navbar />
+      <div class="h-[70px] lg:hidden"></div>
       <header-carousel />
       <NuxtPage />
       <app-footer/>

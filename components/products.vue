@@ -9,6 +9,7 @@
           v-for="(product, i) in products"
           :key="i"
           class="hover:text-primary-color cursor-pointer"
+          :class="[index == i ? 'text-primary-color' : '']"
           @click="slideTo(i)"
         >
           <div class="flex items-center">
@@ -26,7 +27,7 @@
         <Swiper
           @swiper="onSwiper"
           :slides-per-view="1"
-          :loop="true"
+          :loop="false"
           :effect="'creative'"
           :autoplay="{
             delay: 8000,
@@ -41,29 +42,32 @@
               translate: ['100%', 0, 0],
             },
           }"
+          @slide-change="onSlideChange()"
           class="w-100 my-auto"
         >
-          <SwiperSlide v-for="(pdt, i) in products" :key="i" >
+          <SwiperSlide v-for="(pdt, i) in products" :key="i">
             <div class="flex">
               <div
                 class="border-primary-color min-w-[126px] h-[226px] border-[1px]"
               ></div>
               <div class="w-[210px] h-[186px] mt-5 -ml-[106px]">
-                <v-img src="/images/pdt1.jpeg" cover height="186" width="210" />
+                <v-img :src="pdt.img" cover height="186" width="210" />
               </div>
               <div class="ml-10">
                 <div class="text-[26px] font-medium mt-5">
                   {{ pdt.name.toUpperCase() }}
                 </div>
-                <div class="mt-6 w-100 ">
+                <div class="mt-6 w-100">
                   {{ pdt.desc }}
                 </div>
-                <v-btn
-                  class="mt-5 rounded-btn px-3 py-[10px] text-none"
-                  variant="flat"
-                  color="primary"
-                  >View More<i-right-2 class="ml-2"
-                /></v-btn>
+                <NuxtLink :to="`/service/${pdt.id}`">
+                  <v-btn
+                    class="mt-5 rounded-btn px-3 py-[10px] text-none"
+                    variant="flat"
+                    color="primary"
+                    >View More<i-right-2 class="ml-2"
+                  /></v-btn>
+                </NuxtLink>
               </div>
             </div>
           </SwiperSlide>
@@ -92,57 +96,27 @@
 <script lang="ts">
 import "swiper/css";
 import "swiper/css/navigation";
+import { useAppStore } from "../stores/store";
 
 export default defineComponent({
   name: "",
 
   setup() {
-    const products = ref([
-      {
-        name: "Industrial & Oil-Field Spare Parts",
-        desc: "EARLY recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in the Oilfield & Industrial sector",
-      },
-      {
-        name: "Fasteners",
-        desc: "",
-      },
-      {
-        name: "Power Tools & Pneumatic Tools",
-        desc: "",
-      },
-      {
-        name: "Engineering & Hand Tools",
-        desc: "",
-      },
-      {
-        name: "Measuring & Inspection Tools",
-        desc: "",
-      },
-      {
-        name: "Safety Products",
-        desc: "",
-      },
-      {
-        name: "Lifting Equipment",
-        desc: "",
-      },
-      {
-        name: "Welding Equipment/ Cutting & Welding Consumable",
-        desc: "",
-      },
-      {
-        name: "Electrical & Plumbing Materials",
-        desc: "",
-      },
-    ]);
+    const AppStore = useAppStore();
+
+    const products = ref(AppStore.services);
     const swiperInstance = ref();
+    const index = ref();
 
     const onSwiper = (swiper: any) => {
       swiperInstance.value = swiper;
+      index.value = swiperInstance.value.activeIndex;
+    };
+    const onSlideChange = () => {
+      index.value = swiperInstance.value.activeIndex;
     };
     const slideTo = (index: number) => {
-      console.log(index);
-      swiperInstance.value.slideTo(index , 0);
+      swiperInstance.value.slideTo(index, 0);
     };
     const swiperNextSlide = () => {
       swiperInstance.value.slideNext();
@@ -155,6 +129,8 @@ export default defineComponent({
       swiperNextSlide,
       onSwiper,
       slideTo,
+      index,
+      onSlideChange,
       products,
     };
   },

@@ -19,7 +19,7 @@
 
       <div class="flex">
         <div class="mt-[28px] lg:mt-0 flex flex-col">
-          <div class="px-5 pt-[20px] lg:!pt-[0px] text-[#474747]">
+          <div class="px-5 pt-[20px] lg:!pt-[0px] text-[#474747] lg:ml-7">
             <p>
               Planning a new facility or reorganizing an existing one is a
               daunting task. We offer extensive technical and product know how,

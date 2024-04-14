@@ -46,14 +46,15 @@ const onClickOutside = () => {
 </script>
 
 <template>
-  <div class="lg:hidden h-[70px] z-50">
-    <div
-      class="bg-white h-[70px] z-[15] w-100 fixed shadow-[0px_10px_15px_0px_#0000000A]"
-    >
-      <div class="flex items-center h-full container">
-        <div class="">
-          <v-img src="/images/ultimate_logo.png" width="133" />
-        </div>
+  <div class="lg:hidden h-[70px] z-50 bg-white fixed w-[100vw]">
+    <div class="h-[70px] container shadow-[0px_10px_15px_0px_#0000000A]">
+      <div class="flex items-center h-full">
+        <NuxtLink to="/">
+          <div class="">
+            <v-img src="/images/ultimate_logo.png" width="133" />
+          </div>
+        </NuxtLink>
+
         <v-spacer />
         <div>
           <v-btn
@@ -89,9 +90,12 @@ const onClickOutside = () => {
       class="bg-white h-[100px] z-[50] w-100 fixed shadow-[0px_10px_15px_0px_#0000000A]"
     >
       <div class="flex items-center h-full container">
-        <div class="">
-          <v-img src="/images/ultimate_logo.png" width="260px" />
-        </div>
+        <NuxtLink to="/">
+          <div class="">
+            <v-img src="/images/ultimate_logo.png" width="260px" />
+          </div>
+        </NuxtLink>
+
         <v-spacer />
         <div>
           <ul class="flex">

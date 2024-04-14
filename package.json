@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@pinia/nuxt": "^0.5.1",
     "flowbite": "^2.3.0",
     "google-fonts": "^1.0.0",
     "nuxt": "^3.10.2",
     "nuxt-swiper": "^1.2.2",
+    "pinia": "^2.1.7",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
   },

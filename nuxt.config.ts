@@ -17,7 +17,11 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-svgo",
     "nuxt-swiper",
+    "@pinia/nuxt",
   ],
+  pinia: {
+    storesDirs: ["./stores/**"],
+  },
   swiper: {
     prefix: "Swiper",
     styleLang: "css",

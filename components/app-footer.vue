@@ -51,9 +51,9 @@
               <ul>
                 <li v-for="(item, i) in products" :key="i" class="mt-2">
                   <NuxtLink
-                    :to="item.link"
+                    :to="`/service/${item.id}`"
                     class="hover:text-primary-color text-[20px]"
-                    >{{ item.title }}</NuxtLink
+                    >{{ item.name }}</NuxtLink
                   >
                 </li>
               </ul>
@@ -79,69 +79,44 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-const products = ref([
-  {
-    title: "Industrial & Oil-Field Spare Parts",
-    link: "",
+<script lang="ts">
+import { useAppStore } from "../stores/store";
+
+export default defineComponent({
+  setup() {
+    const AppStore = useAppStore();
+
+    const products = ref(AppStore.services);
+    const links = ref([
+      {
+        title: "Home",
+        link: "/",
+      },
+      {
+        title: "About Us",
+        link: "/about",
+      },
+      {
+        title: "Our Products",
+        link: "/products",
+      },
+      {
+        title: "Services",
+        link: "/services",
+      },
+      {
+        title: "Our Brands",
+        link: "/brands",
+      },
+      {
+        title: "Contact Us",
+        link: "/contact",
+      },
+    ]);
+    return {
+      products,
+      links,
+    };
   },
-  {
-    title: "Fasteners",
-    link: "",
-  },
-  {
-    title: "Power Tools & Pneumatic Tools",
-    link: "",
-  },
-  {
-    title: "Engineering & Hand Tools",
-    link: "",
-  },
-  {
-    title: "Measuring & Inspection Tools",
-    link: "",
-  },
-  {
-    title: "Safety Products",
-    link: "",
-  },
-  {
-    title: "Lifting equipments",
-    link: "",
-  },
-  {
-    title: "Welding Equipment/ Cutting & Welding Consumable",
-    link: "",
-  },
-  {
-    title: "Electrical & Plumbing Materials",
-    link: "",
-  },
-]);
-const links = ref([
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "About Us",
-    link: "/about",
-  },
-  {
-    title: "Our Products",
-    link: "/products",
-  },
-  {
-    title: "Services",
-    link: "/services",
-  },
-  {
-    title: "Our Brands",
-    link: "/brands",
-  },
-  {
-    title: "Contact Us",
-    link: "/contact",
-  },
-]);
+});
 </script>
