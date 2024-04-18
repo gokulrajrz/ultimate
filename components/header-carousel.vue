@@ -19,25 +19,25 @@ export default defineComponent({
       {
         title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
         desc: "Early recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in theOil-Field & Industrial sector",
-        img: "/images/bg-banner.jpg",
+        img: ["/images/bg-banner.jpg","/images/bm-1.png"],
         link: "/service/1",
       },
       {
         title: "Power tools & pneumatic tools",
         desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools",
-        img: "/images/banner-2.png",
+        img: ["/images/banner-2.png","/images/bm-2.png"],
         link: "/service/3",
       },
       {
         title: "Engineering & hand tools",
         desc: "We cater from a vast list of Engineering & Hand Tools",
-        img: "/images/banner-3.png",
+        img: ["/images/banner-3.png","/images/bm-3.png"],
         link: "/service/4",
       },
       {
         title: "OUR BRANDS & CLIENTS",
         desc: "",
-        img: "/images/banner-4.png",
+        img: ["/images/banner-4.png","/images/bm-4.png"],
         link: "/brands",
       },
     ]);
@@ -81,7 +81,8 @@ export default defineComponent({
       <SwiperSlide v-for="(item, i) in items" :key="i">
         <div class="h-[457px] relative">
           <div class="w-100 h-100 absolute">
-            <v-img :src="item.img" width="100%" height="100%" cover />
+            <img class="lg:hidden h-100 w-100" :src="item.img[1]"/>
+            <img class="hidden lg:block h-100 w-100" :src="item.img[0]"/>
           </div>
           <div
             class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]"
@@ -112,3 +113,4 @@ export default defineComponent({
     </div>
   </div>
 </template>
+

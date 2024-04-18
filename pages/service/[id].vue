@@ -65,7 +65,7 @@ export default defineComponent({
       </div>
     </div>
 
-    <carousel4 class="my-[80px]" />
+    <carousel5 class="my-[80px]" />
 
     <contact />
   </div>
