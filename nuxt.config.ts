@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   swiper: {
     prefix: "Swiper",
     styleLang: "css",
-    modules: ["navigation", "pagination", "virtual"],
+    modules: ["navigation", "pagination", "autoplay"],
   },
   svgo: {
     autoImportPath: "./assets/icons/",
