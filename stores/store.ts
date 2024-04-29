@@ -17,7 +17,7 @@ export const useAppStore = defineStore("app", {
           "O-Rings",
           "Oil  Gaskets",
         ],
-        img: "/services/1.png",
+        img: "/services/1.jpeg",
       },
       {
         id: "2",

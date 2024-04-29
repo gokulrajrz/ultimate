@@ -2,7 +2,7 @@
   <div class="container">
     <div class="my-5 bg-[#D9D9D9] pb-7 grid grid-cols-1 lg:grid-cols-3">
       <div
-        class="rounded-t-[10px] lg:rounded-r-[0px] lg:rounded-l-[10px] border-right bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color"
+        class="rounded-t-[10px] lg:rounded-r-[0px] lg:rounded-l-[10px] border-right bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color duration-200"
       >
         <div>
           <i-vector-1 class="text-white text-[80px] mb-[-10px]" />
@@ -90,7 +90,7 @@
         </div>
       </div>
       <div
-        class="bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color"
+        class="bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color duration-200"
       >
         <div>
           <i-vector-2 class="text-white text-[60px]" />
@@ -113,7 +113,7 @@
         </div>
       </div>
       <div
-        class="border-left lg:rounded-r-[10px] rounded-b-[10px] lg:rounded-l-[0px] bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color"
+        class="border-left lg:rounded-r-[10px] rounded-b-[10px] lg:rounded-l-[0px] bg-banner-grey drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex items-center hover:bg-primary-color duration-200"
       >
         <div>
           <i-vector-3 class="text-white text-[80px]" />

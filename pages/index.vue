@@ -2,7 +2,7 @@
   <div>
     <banner />
     <div
-      class="h-[300px] lg:h-[350px] bg-[url('/images/bg-1.png')] bg-cover mt-16 flex items-center bg-center"
+      class="h-[300px] lg:h-[350px] bg-[url('/images/bg-m.jpeg')] lg:bg-[url('/images/bg-1.png')] bg-cover mt-16 flex items-center bg-center"
     >
       <div class="container overflow-hidden">
         <div
@@ -11,7 +11,7 @@
           {{ "Right Equipments Delivered at the Right time with unbeatable" }}
         </div>
         <div
-          class="b-text-border text-[#FF0000] text-xl sm:text-2xl md:text-4xl !text-center lg:!text-left lg:text-[65px] max-w-[734px] font-bold lg:leading-[75px] exo-2 lg:drop-shadow-[0_4px_6px_#000000]"
+          class="b-text-border text-[#FFF] text-xl sm:text-2xl md:text-4xl !text-center lg:!text-left lg:text-[65px] max-w-[734px] font-bold lg:leading-[75px] exo-2 lg:drop-shadow-[0_4px_6px_#000000]"
         >
           {{ "quality & affordable pricing".toUpperCase() }}
         </div>
