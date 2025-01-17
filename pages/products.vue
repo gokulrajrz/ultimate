@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="mb-12">
-      <div
+      <h1
         class="text-primary-color text-[35px] font-bold text-center mt-14 mb-7"
       >
         OUR PRODUCTS
-      </div>
+      </h1>
       <div>
         <pdt-card />
       </div>

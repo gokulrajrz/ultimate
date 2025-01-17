@@ -5,7 +5,7 @@
         <div class="h-[90px] w-[90px]">
           <v-avatar :image="review.img" size="90"></v-avatar>
         </div>
-        <div class="text-primary-color mt-5 text-center">
+        <div class="text-[#FFDE00] mt-5 text-center">
           {{ review.name
           }}<span class="text-white"> - {{ review.company }}</span>
         </div>

@@ -2,18 +2,39 @@
   <div>
     <banner />
     <div
-      class="h-[300px] lg:h-[350px] bg-[url('/images/bg-m.jpeg')] lg:bg-[url('/images/bg-1.png')] bg-cover mt-16 flex items-center bg-center"
+      class="bg-[url('/images/special-products-bg.jpg')] bg-cover flex-col items-center py-12 hidden lg:flex"
     >
-      <div class="container overflow-hidden">
-        <div
-          class="text-white text-lg sm:text-xl md:text-3xl lg:text-[48px] max-w-[818px] italic lg:leading-[60px] font-black exo-2 !text-center lg:!text-left"
-        >
-          {{ "Right Equipments Delivered at the Right time with unbeatable" }}
+      <h2 class="text-white font-bold text-3xl">SPECIAL PRODUCTS</h2>
+
+      <sp-prod :changeColor="true" />
+
+      <h2 class="text-white font-bold text-3xl py-10">SPECIAL BRANDS</h2>
+
+      <div class="bg-white w-full py-5">
+        <div class="container flex flex-wrap gap-3 justify-center">
+          <img :src="brand" alt="" v-for="(brand, i) in sp_brands" :key="i" />
         </div>
+      </div>
+
+      <button
+        class="bg-[#ffffff] rounded-lg px-5 py-2 !text-[#C6282E] mt-8 flex items-center gap-2"
+      >
+        View More
+        <ChevronRightIcon
+          class="w-5 h-5 bg-primary-color text-white rounded-full"
+        />
+      </button>
+    </div>
+    <div
+      class="py-10 bg-[url('/images/bg-m.jpeg')] lg:bg-[url('/images/bg-1.png')] bg-cover flex items-center bg-center"
+    >
+      <div class="container flex justify-center overflow-hidden">
         <div
-          class="b-text-border text-[#FFF] text-xl sm:text-2xl md:text-4xl !text-center lg:!text-left lg:text-[65px] max-w-[734px] font-bold lg:leading-[75px] exo-2 lg:drop-shadow-[0_4px_6px_#000000]"
+          class="text-white text-center text-[32px] font-black max-w-[880px]"
         >
-          {{ "quality & affordable pricing".toUpperCase() }}
+          {{
+            "Right Equipments Delivered at the Right time with unbeatable quality & affordable pricing".toUpperCase()
+          }}
         </div>
       </div>
     </div>
@@ -75,7 +96,9 @@
       <div class="text-primary-color text-[35px] font-bold text-center my-7">
         PEOPLE SAYS
       </div>
-      <div class="h-[350px] bg-[url(/images/bg-2.png)] bg-cover">
+      <div
+        class="h-[350px] bg-[url(/images/testimonials-bg.png)] bg-center bg-cover"
+      >
         <carousel-2 />
       </div>
     </div>
@@ -93,7 +116,7 @@
       <div class="text-primary-color text-[35px] font-bold text-center mb-7">
         OUR CLIENTS
       </div>
-      <carousel4/>
+      <carousel4 />
     </div>
 
     <div class="mt-20 mb-15">
@@ -107,6 +130,13 @@
 </template>
 
 <script setup lang="ts">
+import { ChevronRightIcon } from "@heroicons/vue/24/solid";
+import { useAppStore } from "~/stores/store";
+
+const counter = useAppStore();
+
+const sp_brands = ref(counter.sp_brands);
+
 const brands = ref([
   {
     img: "/images/brands/rbc.png",

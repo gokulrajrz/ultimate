@@ -17,9 +17,9 @@ export default defineComponent({
 </script>
 <template>
   <div class="container">
-    <div class="text-primary text-[35px] font-bold text-center mt-14">
+    <h1 class="text-primary text-[35px] font-bold text-center mt-14">
       {{ service?.name }}
-    </div>
+    </h1>
     <div class="mt-10 flex flex-col lg:flex-row">
       <div class="flex justify-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">

@@ -18,6 +18,10 @@ const items_nav = ref([
     link: "/services",
   },
   {
+    title: "Special Products",
+    link: "/special-products",
+  },
+  {
     title: "Our Brands",
     link: "/brands",
   },
@@ -92,7 +96,7 @@ const onClickOutside = () => {
       <div class="flex items-center h-full container">
         <NuxtLink to="/">
           <div class="">
-            <v-img src="/images/ultimate_logo.png" width="260px" />
+            <v-img src="/images/ultimate_logo.png" width="200px" />
           </div>
         </NuxtLink>
 
@@ -102,7 +106,7 @@ const onClickOutside = () => {
             <li v-for="(item, i) in items_nav" :key="i">
               <NuxtLink
                 :to="item.link"
-                class="nav-link pa-4 hover:text-primary-color font-bold"
+                class="text-sm nav-link pa-4 hover:text-primary-color font-bold"
                 :class="[route.path == item.link ? 'text-primary-color' : '']"
                 >{{ item.title.toUpperCase() }}</NuxtLink
               >
