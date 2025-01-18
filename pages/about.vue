@@ -143,29 +143,27 @@
   </div>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  setup() {
-    const points = ref([
-      {
-        title: "Competent Pricing",
-      },
-      {
-        title: "Minimum delivery time",
-      },
-      {
-        title: "Our expertise in sourcing",
-      },
-      {
-        title: "Quality Materials",
-      },
-      {
-        title: "Product Knowledge and Suggestions",
-      },
-    ]);
-    return {
-      points,
-    };
+<script setup lang="ts">
+import { useAppStore } from "~/stores/store";
+
+const counter = useAppStore();
+const icons = counter.icons;
+
+const points = [
+  {
+    title: "Competent Pricing",
   },
-});
+  {
+    title: "Minimum delivery time",
+  },
+  {
+    title: "Our expertise in sourcing",
+  },
+  {
+    title: "Quality Materials",
+  },
+  {
+    title: "Product Knowledge and Suggestions",
+  },
+];
 </script>

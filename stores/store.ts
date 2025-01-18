@@ -198,6 +198,16 @@ export const useAppStore = defineStore("app", {
       "/images/brands-home/27.png",
       "/images/brands-home/28.png",
     ],
+    icons: [
+      "/images/clients/magenta.jpeg",
+      "/images/clients/mhps.jpeg",
+      "/images/clients/enova.png",
+      "/images/clients/almansoori.png",
+      "/images/clients/nov.png",
+      "/images/clients/altrad.png",
+      "/images/clients/serco.png",
+      "/images/clients/yas.png",
+    ],
   }),
   getters: {
     getService: (state) => {

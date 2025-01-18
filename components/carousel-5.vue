@@ -118,25 +118,28 @@ export default defineComponent({
       icon="mdi-chevron-left"
       size="small"
       @click="swiperPrevSlide"
-      class="opacity-50"
+      class="opacity-50 absolute left-0"
     />
-    <Swiper
-      @swiper="onSwiper"
-      :slides-per-view="smAndDown ? 2 : md ? 4 : 8"
-      :loop="true"
-      class="w-100 pr-5 mx-2"
-    >
-      <SwiperSlide v-for="(icon, i) in icons" :key="i" class="h-[60px] w-full">
-        <div class="h-[60px] w-full flex items-center">
-          <v-img :src="icon.img"></v-img>
-        </div>
-      </SwiperSlide>
-    </Swiper>
+    <div class="absolute w-full px-[60px]">
+      <Swiper
+        @swiper="onSwiper"
+        :slides-per-view="smAndDown ? 2 : md ? 4 : 8"
+        :loop="true"
+        class="w-full pr-5"
+      >
+        <SwiperSlide v-for="(icon, i) in icons" :key="i" class="h-[60px]">
+          <div class="h-[60px] flex items-center">
+            <v-img :src="icon.img"></v-img>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+
     <v-btn
       icon="mdi-chevron-right"
       size="small"
       @click="swiperNextSlide"
-      class="opacity-50"
+      class="opacity-50 absolute ml-auto right-0"
     />
   </div>
 </template>

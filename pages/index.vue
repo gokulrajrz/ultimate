@@ -107,7 +107,8 @@
       <div class="text-primary-color text-[35px] font-bold text-center my-7">
         OUR BRANDS
       </div>
-      <carousel3 :icons="brands" />
+      <!-- <carousel3 :icons="brands" /> -->
+      <infinity-scroll :imgs="brands" />
 
       <div
         class="my-15 h-[2px] bg-[#d9d9d9] shadow-[0px_4px_4px_0px_#0000001A] w-100"
@@ -116,7 +117,8 @@
       <div class="text-primary-color text-[35px] font-bold text-center mb-7">
         OUR CLIENTS
       </div>
-      <carousel4 />
+      <infinity-scroll :imgs="icons" />
+      <!-- <carousel4 /> -->
     </div>
 
     <div class="mt-20 mb-15">
@@ -136,32 +138,17 @@ import { useAppStore } from "~/stores/store";
 const counter = useAppStore();
 
 const sp_brands = ref(counter.sp_brands);
+const icons = counter.icons;
 
 const brands = ref([
-  {
-    img: "/images/brands/rbc.png",
-  },
-  {
-    img: "/images/brands/skf.png",
-  },
-  {
-    img: "/images/brands/makita.jpeg",
-  },
-  {
-    img: "/images/brands/dewalt.png",
-  },
-  {
-    img: "/images/brands/stanley.png",
-  },
-  {
-    img: "/images/brands/kawasaki.jpeg",
-  },
-  {
-    img: "/images/brands/bd.png",
-  },
-  {
-    img: "/images/brands/bosch.png",
-  },
+  "/images/brands/rbc.png",
+  "/images/brands/skf.png",
+  "/images/brands/makita.jpeg",
+  "/images/brands/dewalt.png",
+  "/images/brands/stanley.png",
+  "/images/brands/kawasaki.jpeg",
+  "/images/brands/bd.png",
+  "/images/brands/bosch.png",
 ]);
 
 const clients = ref([
