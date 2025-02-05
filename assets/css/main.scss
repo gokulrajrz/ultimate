@@ -6,8 +6,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-//   font-family: "Sofia Sans";
-font-family: "Roboto";
+  //   font-family: "Sofia Sans";
+  font-family: "Roboto";
 }
 
 .rounded-btn {
@@ -23,4 +23,16 @@ font-family: "Roboto";
 
 .exo-2 {
   font-family: "Exo 2";
+}
+
+.about-home{
+  float: left;
+  margin-right: 20px;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }

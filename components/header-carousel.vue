@@ -19,7 +19,7 @@ export default defineComponent({
       {
         title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
         desc: "Early recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in theOil-Field & Industrial sector",
-        img: ["/images/bg-banner.jpg","/images/bm-1.png"],
+        img: ["/images/bg-banner.png","/images/bm-1.png"],
         link: "/service/1",
       },
       {

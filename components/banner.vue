@@ -5,13 +5,13 @@
         v-for="(card, index) in cards"
         :key="index"
         :class="[
-          'drop-shadow-[0_4px_4px_0px_#00000040] py-8 px-6 flex flex-col justify-center items-center duration-200 text-[#C6282E]',
+          'drop-shadow-[0_4px_4px_0px_#00000040] py-6 px-6 flex flex-col justify-center items-center duration-200 text-[#C6282E]',
         ]"
         @mouseenter="card.hover = true"
         @mouseleave="card.hover = false"
       >
         <div
-          class="pa-3 rounded-full mb-5 border-2 border-rose-500 transition-all duration-150"
+          class="pa-3 rounded-full mb-3 border-2 border-rose-500 transition-all duration-150"
           :class="[
             card.hover && 'text-white bg-primary-color ',
           ]"
