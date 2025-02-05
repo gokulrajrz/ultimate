@@ -114,7 +114,7 @@
                 }}
               </div>
             </div>
-        <p>
+        <p class="text-justify">
           We offer extensive technical and product know-how, coupled with a deep
           understanding of modern setup requirements. UMET has specialists and
           consultants located throughout the UAE, ready to apply their knowledge
