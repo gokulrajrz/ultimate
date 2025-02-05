@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="my-5 pb-7 grid grid-cols-1 lg:grid-cols-3">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
       <div
         v-for="(card, index) in cards"
         :key="index"
