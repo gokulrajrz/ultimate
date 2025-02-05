@@ -93,7 +93,7 @@ const onClickOutside = () => {
     <div
       class="bg-white h-[100px] z-[50] w-100 fixed shadow-[0px_10px_15px_0px_#0000000A]"
     >
-      <div class="flex items-center h-full container">
+      <div class="flex items-center h-full px-[60px]">
         <NuxtLink to="/">
           <div class="">
             <v-img src="/images/ultimate_logo.png" width="200px" />
