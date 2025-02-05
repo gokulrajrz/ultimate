@@ -2,7 +2,7 @@
   <div>
     <banner />
     <div
-      class="bg-[url('/images/special-products-bg.jpg')] bg-cover flex-col items-center py-12 hidden lg:flex"
+      class="bg-[url('/images/bg-m2.png')] lg:bg-[url('/images/special-products-bg.jpg')] bg-[100%_auto] lg:bg-cover flex-col items-center py-12 flex"
     >
       <h2 class="text-white font-bold text-3xl">SPECIAL PRODUCTS</h2>
 
@@ -26,7 +26,7 @@
       </button>
     </div>
     <div
-      class="py-10 bg-[url('/images/bg-m.jpeg')] lg:bg-[url('/images/bg-1.png')] bg-cover flex items-center bg-center"
+      class="py-10 bg-[url('/images/bg-m.png')] lg:bg-[url('/images/bg-1.png')] bg-cover flex items-center bg-center"
     >
       <div class="container flex justify-center overflow-hidden">
         <div

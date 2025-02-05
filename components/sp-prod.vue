@@ -1,14 +1,21 @@
 <template>
-  <div class="container mt-[50px] flex gap-6 justify-center flex-wrap">
+  <div
+    class="container mt-[50px] grid grid-cols-3 lg:flex gap-6 justify-center flex-wrap"
+  >
     <div
-      class="w-max flex flex-col items-center font-semibold"
-      v-for="prod in prods"
+      class="w-full lg:w-max flex flex-col items-center font-semibold"
+      v-for="(prod, i) in prods"
       :key="prod.id"
+      :class="[i == prods.length-1 && 'col-span-3']"
     >
       <div
         class="bg-[#D9D9D9] mb-3 rounded-[50%] p-3 border !border-[#E5461F] drop-shadow-[7px_7px_7px_rgba(0,0,0,0.75)]"
       >
-        <img :src="prod.img" :alt="prod.name" class="w-[115px] h-[115px]" />
+        <img
+          :src="prod.img"
+          :alt="prod.name"
+          class="w-[75px] h-[75px] lg:w-[115px] lg:h-[115px]"
+        />
       </div>
       <p :class="changeColor ? 'text-white' : ''">{{ prod.name }}</p>
       <p :class="changeColor ? 'text-[#FFDE00]' : ''">{{ prod.type }}</p>
