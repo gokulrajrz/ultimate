@@ -1,6 +1,9 @@
 <template>
   <div class="mt-6 hidden lg:block">
-    <div class="text-xl font-bold mb-5">OUR PRODUCTS</div>
+    <!-- <div class="text-xl font-bold mb-5">OUR PRODUCTS</div> -->
+    <div class="text-primary-color text-[35px] font-bold text-center my-7">
+      OUR PRODUCTS
+    </div>
     <div class="grid grid-cols-4">
       <div
         class="shadow-[0px_10px_15px_0px_#00000014] pa-5 rounded-[10px] bg-white mr-10"

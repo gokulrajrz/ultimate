@@ -11,15 +11,15 @@
         @mouseleave="card.hover = false"
       >
         <div
-          class="pa-5 rounded-full mb-5 border-2 border-rose-500 transition-all duration-150"
+          class="pa-3 rounded-full mb-5 border-2 border-rose-500 transition-all duration-150"
           :class="[
             card.hover && 'text-white bg-primary-color ',
           ]"
         >
-          <component :is="card.icon" class="text-[50px] !m-0" />
+          <component :is="card.icon" class="text-[35px] !m-0" />
         </div>
         <div class="flex flex-col items-center">
-          <div class="text-xl font-bold">{{ card.title }}</div>
+          <div class="text-[16px] font-bold">{{ card.title }}</div>
           <div v-if="card.subtitle" class="flex mt-1 items-center">
             <div class="text-[14px]">{{ card.subtitle }}</div>
           </div>
