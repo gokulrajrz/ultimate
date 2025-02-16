@@ -39,7 +39,7 @@ export const useAppStore = defineStore("app", {
       {
         id: "3",
         name: "Power Tools & Pneumatic Tools",
-        desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools and cordless power tools in  the region. Below are few of the tools that we cate",
+        desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools and cordless power tools in  the region. Below are few of the tools that we cater",
         points: [
           "Drilling machines",
           "Air Impact Wrench",
@@ -76,7 +76,7 @@ export const useAppStore = defineStore("app", {
       {
         id: "5",
         name: "Measuring & Inspection Tools",
-        desc: "",
+        desc: "Ultimate Equipments presents a comprehensive range of measuring and testing equipment like measuring tape, calipers, spirit level, and more to meet all your precision needs. Below are some of the products we cater in this category",
         points: [
           "Measuring Tape",
           "Hardness Testers",
@@ -150,7 +150,7 @@ export const useAppStore = defineStore("app", {
       {
         id: "9",
         name: "Electrical & Plumbing Materials",
-        desc: "",
+        desc: "Ultimate Equipments offers an extensive range of high-quality electric and plumbing materials like electrical cables, pipes & fittings, sanitary fittings, breakers, and more to meet your needs. Below are some of the products we cater in this category",
         points: [
           "Electrical Cables",
           "Pipes & Fittings",

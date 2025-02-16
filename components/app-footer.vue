@@ -40,7 +40,7 @@
               density="compact"
             ></v-textarea>
             <div class="flex justify-center mb-16">
-              <v-btn class="rounded-btn w-[109px] text-black">Submit</v-btn>
+              <v-btn class="rounded-btn w-[109px] text-black hover:bg-primary-color hover:!text-[#fff]">Submit</v-btn>
             </div>
           </div>
         </div>
