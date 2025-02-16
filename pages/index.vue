@@ -103,7 +103,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="hidden lg:block">
         <img src="/images/abt-home.jpeg" alt="" class="h-[306px] w-[373px] about-home rounded-[10px]"/>
         <div class="flex justify-center">
               <div
@@ -161,7 +161,7 @@
 
     <div class="mb-[80px]">
       <div class="text-primary-color text-[35px] font-bold text-center my-7">
-        PEOPLE SAYS
+        TESTIMONIALS
       </div>
       <div
         class="h-[350px] bg-[url(/images/testimonials-bg.png)] bg-center bg-cover"
@@ -220,7 +220,7 @@ const brands = ref([
 
 const clients = ref([
   {
-    img: "/images/clients/magenta.jpeg",
+    img: "/images/clients/magenta.png",
   },
   {
     img: "/images/clients/mhps.jpeg",

@@ -14,7 +14,7 @@
 
   <div class="mb-[80px]">
     <div class="text-primary-color text-[35px] font-bold text-center my-7">
-      PEOPLE SAYS
+      TESTIMONIALS
     </div>
     <div class="h-[350px] bg-[url(/images/bg-2.png)] bg-cover">
       <carousel-2 />

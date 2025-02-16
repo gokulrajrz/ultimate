@@ -55,7 +55,7 @@
         >
           <div class="flex justify-center">
             <div
-              class="text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold dtext-center lg:text-left mb-8 w-100 mx-5"
+              class="text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold text-center lg:text-left mb-8 w-100 mx-5"
             >
               WHAT WE DO
             </div>
@@ -87,7 +87,7 @@
 
     <div class="flex flex-col lg:flex-row">
       <div
-        class="lg:hidden text-2xl sm:text-3xl text-primary lg:text-[35px] text-center mt-[40px] font-bold dtext-center lg:text-left w-100"
+        class="lg:hidden text-2xl sm:text-3xl text-primary lg:text-[35px] text-center mt-[40px] font-bold lg:text-left w-100"
       >
         Why Us?
       </div>
@@ -99,7 +99,7 @@
 
       <div class="px-5 lg:ml-10">
         <div
-          class="hidden lg:block text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold dtext-center lg:text-left mb-8 w-100"
+          class="hidden lg:block text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold text-center lg:text-left mb-8 w-100"
         >
           Why Us?
         </div>

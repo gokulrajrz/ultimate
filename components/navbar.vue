@@ -106,9 +106,9 @@ const onClickOutside = () => {
             <li v-for="(item, i) in items_nav" :key="i">
               <NuxtLink
                 :to="item.link"
-                class="text-sm nav-link pa-4 hover:text-primary-color font-bold"
+                class="text-[12px] my-auto xl:text-sm nav-link hover:text-primary-color font-bold"
                 :class="[route.path == item.link ? 'text-primary-color' : '']"
-                >{{ item.title.toUpperCase() }}</NuxtLink
+                ><p class="text-center p-3">{{ item.title.toUpperCase() }}</p></NuxtLink
               >
             </li>
           </ul>

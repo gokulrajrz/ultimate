@@ -199,7 +199,7 @@ export const useAppStore = defineStore("app", {
       "/images/brands-home/28.png",
     ],
     icons: [
-      "/images/clients/magenta.jpeg",
+      "/images/clients/magenta.png",
       "/images/clients/mhps.jpeg",
       "/images/clients/enova.png",
       "/images/clients/almansoori.png",

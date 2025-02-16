@@ -19,7 +19,7 @@ const props = defineProps<{
 
 const imgs = [...props.imgs, ...props.imgs];
 
-console.log(imgs);
+// console.log(imgs);
 </script>
 
 <style>

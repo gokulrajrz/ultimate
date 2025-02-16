@@ -218,7 +218,7 @@ const electrical = [
 ];
 
 const icons = [
-  "magenta.jpeg",
+  "magenta.png",
   "mhps.jpeg",
   "enova.png",
   "almansoori.png",

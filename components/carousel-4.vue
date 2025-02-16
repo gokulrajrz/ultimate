@@ -9,7 +9,7 @@ export default defineComponent({
 
     const icons = ref([
       {
-        img: "/images/clients/magenta.jpeg",
+        img: "/images/clients/magenta.png",
       },
       {
         img: "/images/clients/mhps.jpeg",
