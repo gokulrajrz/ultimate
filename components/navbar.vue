@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
+const AppStore = useAppStore();
+
+const products = ref(AppStore.services);
+const showDropdown = ref(false);
+
 const items_nav = ref([
   {
     title: "Home",
@@ -106,10 +111,67 @@ const onClickOutside = () => {
             <li v-for="(item, i) in items_nav" :key="i">
               <NuxtLink
                 :to="item.link"
+                v-if="item.title.toLowerCase() != 'our products'"
                 class="text-[12px] my-auto xl:text-sm nav-link hover:text-primary-color font-bold"
                 :class="[route.path == item.link ? 'text-primary-color' : '']"
-                ><p class="text-center p-3">{{ item.title.toUpperCase() }}</p></NuxtLink
               >
+                <p class="text-center p-3">
+                  {{ item.title.toUpperCase() }}
+                </p>
+              </NuxtLink>
+
+              <div
+                v-else
+                class="group text-[12px] xl:text-sm relative flex h-full hover:text-primary-color font-bold"
+                @mouseenter="showDropdown = true"
+                @mouseleave="showDropdown = false"
+              >
+                <NuxtLink
+                  class="p-3 flex items-center justify-center"
+                  :to="item.link"
+                >
+                  <p class="mr-1">{{ item.title.toUpperCase() }}</p>
+
+                  <svg
+                    class="-mr-1 size-5 text-gray-400 group-hover:rotate-180 transition-all"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </NuxtLink>
+                <Transition
+                  enter-active-class="transition-all duration-300 origin-top ease-out"
+                  enter-from-class="opacity-0 scale-95"
+                  enter-to-class="opacity-100 scale-100"
+                  leave-active-class="transition-all duration-200 origin-top ease-in"
+                  leave-from-class="opacity-100 scale-100"
+                  leave-to-class="opacity-0 scale-95"
+                >
+                  <div
+                    class="absolute bg-primary-color text-white rounded-lg bottom-0 translate-y-[100%] px-5 py-3 w-[200px]"
+                    v-if="showDropdown"
+                  >
+                    <ul>
+                      <li
+                        v-for="(item, i) in products"
+                        :key="i"
+                        class="mt-2 leading-[1.2] hover:text-[#ffc2c2]"
+                      >
+                        <NuxtLink :to="`/service/${item.id}`">{{
+                          item.name
+                        }}</NuxtLink>
+                      </li>
+                    </ul>
+                  </div>
+                </Transition>
+              </div>
             </li>
           </ul>
         </div>

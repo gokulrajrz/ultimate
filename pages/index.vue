@@ -42,7 +42,9 @@
     </div>
 
     <div class="about container pb-16">
-      <div class="text-primary-color text-[35px] font-bold text-center mt-14 lg:mb-[40px]">
+      <div
+        class="text-primary-color text-[35px] font-bold text-center mt-14 lg:mb-[40px]"
+      >
         ABOUT US
       </div>
       <div class="mt-10 flex lg:hidden flex-col lg:flex-row relative">
@@ -104,16 +106,18 @@
       </div>
 
       <div class="hidden lg:block">
-        <img src="/images/abt-home.jpeg" alt="" class="h-[306px] w-[373px] about-home rounded-[10px]"/>
+        <img
+          src="/images/abt-home.jpeg"
+          alt=""
+          class="h-[306px] w-[373px] about-home rounded-[10px]"
+        />
         <div class="flex justify-center">
-              <div
-                class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[595px] text-center mb-8 mx-5"
-              >
-                {{
-                  "ultimate Equipments and tools trading l.l.c".toUpperCase()
-                }}
-              </div>
-            </div>
+          <div
+            class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[595px] text-center mb-8 mx-5"
+          >
+            {{ "ultimate Equipments and tools trading l.l.c".toUpperCase() }}
+          </div>
+        </div>
         <p class="text-justify">
           We offer extensive technical and product know-how, coupled with a deep
           understanding of modern setup requirements. UMET has specialists and
@@ -171,7 +175,7 @@
     </div>
 
     <div class="container flex flex-col items-center">
-      <div class="text-primary-color text-[35px] font-bold text-center my-7">
+      <div class="text-primary-color text-[35px] font-bold text-center mb-7">
         OUR BRANDS
       </div>
       <!-- <carousel3 :icons="brands" /> -->
@@ -188,7 +192,7 @@
       <!-- <carousel4 /> -->
     </div>
 
-    <div class="mt-20 mb-15">
+    <div class="mt-15 mb-15">
       <g-map />
     </div>
 
@@ -205,45 +209,31 @@ import { useAppStore } from "~/stores/store";
 const counter = useAppStore();
 
 const sp_brands = ref(counter.sp_brands);
-const icons = counter.icons;
+// const icons = counter.icons;
 
 const brands = ref([
   "/images/brands/rbc.png",
   "/images/brands/skf.png",
   "/images/brands/makita.jpeg",
-  "/images/brands/dewalt.png",
-  "/images/brands/stanley.png",
-  "/images/brands/kawasaki.jpeg",
-  "/images/brands/bd.png",
   "/images/brands/bosch.png",
+  "/images/brands/dewalt.png",
+  "/images/brands/sfc.png",
+  "/images/brands/stanley.png",
+  // "/images/brands/kawasaki.jpeg",
+  // "/images/brands/bd.png",
 ]);
 
 const clients = ref([
-  {
-    img: "/images/clients/magenta.png",
-  },
-  {
-    img: "/images/clients/mhps.jpeg",
-  },
-  {
-    img: "/images/clients/enova.png",
-  },
-  {
-    img: "/images/clients/almansoori.png",
-  },
-  {
-    img: "/images/clients/nov.png",
-  },
-  {
-    img: "/images/clients/altrad.png",
-  },
-  {
-    img: "/images/clients/serco.png",
-  },
-  {
-    img: "/images/clients/yas.png",
-  },
+  "/images/clients/enova.png",
+  "/images/clients/nov.png",
+  "/images/clients/almansoori.png",
+  "/images/clients/altrad.png",
+  "/images/clients/mhps.jpeg",
+  "/images/clients/serco.png",
+  "/images/clients/sinyar.png",
 ]);
+
+const icons: string[] = clients.value;
 </script>
 
 <style scoped>
