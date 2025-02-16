@@ -77,3 +77,19 @@
     <contact />
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Our Services | Ultimate Equipments",
+    },
+    {
+      name: "description",
+      content:
+        "We offer expert facility planning, design, & consultation services in the UAE. Maximize efficiency & profitability with our technical knowledge & support!",
+    },
+  ],
+});
+</script>

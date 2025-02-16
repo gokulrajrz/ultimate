@@ -137,3 +137,19 @@
     <carousel5 class="my-[80px]" />
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Contact Us | Ultimate Equipments",
+    },
+    {
+      name: "description",
+      content:
+        "Get in touch with Ultimate Equipments for all your industrial metal equipment & tools needs. Contact us today for expert advice & product inquiries. Call us!",
+    },
+  ],
+});
+</script>

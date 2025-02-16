@@ -146,6 +146,20 @@
 <script setup lang="ts">
 import { useAppStore } from "~/stores/store";
 
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Metal Equipments & Tools Supplier | Ultimate Equipments",
+    },
+    {
+      name: "description",
+      content:
+        "We are experienced Metal Equipments & Tools Supplier in UAE delivering quality materials, tools & equipment on time at the best prices. Contact us!",
+    },
+  ],
+});
+
 const counter = useAppStore();
 const icons = counter.icons;
 

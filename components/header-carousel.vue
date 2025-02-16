@@ -20,19 +20,19 @@ export default defineComponent({
         title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
         desc: "Early recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in theOil-Field & Industrial sector",
         img: ["/images/bg-banner.png","/images/bm-1.png"],
-        link: "/service/1",
+        link: "/service/Industrial&Oil-Field-Spare-Parts",
       },
       {
         title: "Power tools & pneumatic tools",
         desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools",
         img: ["/images/banner-2.png","/images/bm-2.png"],
-        link: "/service/3",
+        link: "/service/Power-Tools&Pneumatic-Tools",
       },
       {
         title: "Engineering & hand tools",
         desc: "We cater from a vast list of Engineering & Hand Tools",
         img: ["/images/banner-3.png","/images/bm-3.png"],
-        link: "/service/4",
+        link: "/service/Engineering&Hand-Tools",
       },
       {
         title: "OUR BRANDS & CLIENTS",

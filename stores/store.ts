@@ -2,8 +2,11 @@ export const useAppStore = defineStore("app", {
   state: () => ({
     services: [
       {
-        id: "1",
+        id: "Industrial&Oil-Field-Spare-Parts",
         name: "Industrial & Oil-Field Spare Parts",
+        metaTitle: "Industrial & Oil-Field Spare Parts | Ultimate Equipments",
+        metaDesc:
+          "Leading supplier of industrial & oil-field spare parts in UAE. We ensure top-quality protection for multinational workforces in construction & industrial sectors.",
         desc: "EARLY recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in the Oilfield & Industrial sector",
         points: [
           "Bearings",
@@ -20,8 +23,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/1.jpeg",
       },
       {
-        id: "2",
+        id: "Fasteners",
         name: "Fasteners",
+        metaTitle: "Fasteners Suppliers in Dubai, UAE | Ultimate Equipments",
+        metaDesc:
+          "Reliable fasteners supplier in Dubai, UAE. Get high-quality industrial fasteners for construction, oilfield, and manufacturing needs. Contact us today!",
         desc: "This is one of the products with our own  production units in India as well and  hence the expertise to the core maximum.  Below are few of the products we cater in  this category",
         points: [
           "Stud Bolts",
@@ -37,8 +43,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/2.jpeg",
       },
       {
-        id: "3",
+        id: "Power-Tools&Pneumatic-Tools",
         name: "Power Tools & Pneumatic Tools",
+        metaTitle: "Power Tools & Pneumatic Tools Dubai, UAE | UMET",
+        metaDesc:
+          "Top supplier of power & pneumatic tools in Dubai, UAE. Get high-quality tools for construction, manufacturing & industrial use. Contact us today!",
         desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools and cordless power tools in  the region. Below are few of the tools that we cater",
         points: [
           "Drilling machines",
@@ -55,8 +64,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/3.jpeg",
       },
       {
-        id: "4",
+        id: "Engineering&Hand-Tools",
         name: "Engineering & Hand Tools",
+        metaTitle: "Engineering & Hand Tools in UAE | UMET",
+        metaDesc:
+          "Leading supplier of engineering & hand tools in UAE. Find high-quality tools for industrial, construction & maintenance needs. Contact us today!",
         desc: "Below are the list of tools that we cater from a vast list  of engineering tools that we specialize",
         points: [
           "Spanners",
@@ -75,7 +87,10 @@ export const useAppStore = defineStore("app", {
       },
       {
         id: "5",
-        name: "Measuring & Inspection Tools",
+        name: "Measuring&Inspection-Tools",
+        metaTitle: "Measuring & Inspection Tools in UAE | UMET",
+        metaDesc:
+          "Trusted supplier of measuring & inspection tools in UAE. Our tools include measuring tape, calipers, hardness testers, micro meters, set squares, etc. Call us!",
         desc: "Ultimate Equipments presents a comprehensive range of measuring and testing equipment like measuring tape, calipers, spirit level, and more to meet all your precision needs. Below are some of the products we cater in this category",
         points: [
           "Measuring Tape",
@@ -91,8 +106,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/5.jpeg",
       },
       {
-        id: "6",
+        id: "Safety-Products",
         name: "Safety Products",
+        metaTitle: "Industrial Safety Products in UAE | UMET",
+        metaDesc:
+          "Leading supplier of industrial safety products in UAE. Get top-quality, safety gear shoes, masks & others equipment for construction. Contact us today!",
         desc: "Early recognition for the need of proper protection to the ever  growing multi-national work force not only in the Construction  field but also in the Oilfield & Industrial sector; resulted in us  bringing in TOP names in SAFETY PRODUCTS today namely3M  (AO Safety, EAR, Peltor&Safewaze), ANSELL, JCB, HONEYWELL. We understand the importance of SAFETY to the end user and  therefore have selected some of the finest products in the  market along with complete range i.e. HEAD to TOE protection.  Our range of Safety Eyewear, Respirators and Hearing Protection  has been carefully put together taking into consideration the  Ergonomic Features, Local Environment, Demographics and  Fashion at the same time not compromising on the SAFETY  STANDARDS which meet with CE or ANSI/CSA standard. Few of  our products are",
         points: [
           "Coveralls",
@@ -111,8 +129,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/6.jpeg",
       },
       {
-        id: "7",
+        id: "Lifting-Equipment",
         name: "Lifting Equipment",
+        metaTitle: "Lifting Equipment Suppliers in UAE | UMET",
+        metaDesc:
+          "Leading lifting equipment suppliers of shackles, lifting chains, chain hoists, pulleys, liver hoists, wire ropes & webbing slings in UAE. Contact us today!",
         desc: "We understand the importance of safety  in this part of equipment and hence we  make sure that we only cater from the  major established brands in this category  with approved certificates and test of  conformance. Below are few of the major  equipment that we cater",
         points: [
           "Shackles",
@@ -126,8 +147,11 @@ export const useAppStore = defineStore("app", {
         img: "/services/7.jpeg",
       },
       {
-        id: "8",
+        id: "Welding-Equipment-Cutting&Welding-Consumable",
         name: "Welding Equipment/ Cutting & Welding Consumable",
+        metaTitle: "Welding Equipment Suppliers in Dubai, UAE | UMET",
+        metaDesc:
+          "Top welding equipment suppliers in Dubai, UAE. Get premium cutting & welding consumables for all industrial & construction needs. Contact us today!",
         desc: "With an extensive inventory,  this is one among our major  products",
         points: [
           "Welding Machines",
@@ -148,8 +172,10 @@ export const useAppStore = defineStore("app", {
         img: "/services/8.jpeg",
       },
       {
-        id: "9",
+        id: "Electrical&Plumbing-Materials",
         name: "Electrical & Plumbing Materials",
+        metaTitle: "Plumbing Items & Electrical Materials in Dubai, UAE | UMET",
+        metaDesc: "Reliable supplier of plumbing items & electrical materials in Dubai, UAE. Get high-quality products for your construction & industrial projects.",
         desc: "Ultimate Equipments offers an extensive range of high-quality electric and plumbing materials like electrical cables, pipes & fittings, sanitary fittings, breakers, and more to meet your needs. Below are some of the products we cater in this category",
         points: [
           "Electrical Cables",

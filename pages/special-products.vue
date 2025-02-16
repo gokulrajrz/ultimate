@@ -62,7 +62,9 @@
       BRANDS
     </h2>
 
-    <div class="container grid gap-5 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 py-14">
+    <div
+      class="container grid gap-5 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 py-14"
+    >
       <div
         class="bg-white flex justify-center items-center drop-shadow-[0_4px_4px_#0000001A] rounded-lg"
         v-for="(brand, i) in sp_brands"
@@ -93,6 +95,20 @@
 
 <script lang="ts" setup>
 import { useAppStore } from "~/stores/store";
+
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Our Special Products | Ultimate Equipments",
+    },
+    {
+      name: "description",
+      content:
+        "Explore our special products like high-quality fasteners, Anco Lock Nuts, Flex Lock Nuts, Nord-Lock Washers, Stover Nuts & more. Contact us today!",
+    },
+  ],
+});
 
 const counter = useAppStore();
 

@@ -174,12 +174,26 @@
       </div>
     </div>
 
-    <products class="!pt-[60px]"/>
+    <products class="!pt-[60px]" />
     <contact class="mt-15" />
   </div>
 </template>
 
 <script setup lang="ts">
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Our Brands | Ultimate Equipments",
+    },
+    {
+      name: "description",
+      content:
+        "We proudly represent a selection of renowned manufacturers & products as authorized agents & distributors  ensuring top-quality offerings for our customers.",
+    },
+  ],
+});
+
 const industrial = [
   "1.png",
   "2.jpeg",

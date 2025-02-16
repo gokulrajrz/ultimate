@@ -11,6 +11,6 @@
 </template>
 <script setup lang="ts">
 useHead({
-  title: "Ultimate Equipments",
+  title: "Ultimate Metal Equipments & Tools Trading Company",
 });
 </script>

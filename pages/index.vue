@@ -199,6 +199,20 @@
 import { ChevronRightIcon } from "@heroicons/vue/24/solid";
 import { useAppStore } from "~/stores/store";
 
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: "Ultimate Metal Equipments & Tools Trading Company",
+    },
+    {
+      name: "description",
+      content:
+        "Discover top-quality metal equipments & tools with Ultimate Equipments. Our specialists are located throughout UAE, ready to meet your setup needs. Contact us!",
+    },
+  ],
+});
+
 const counter = useAppStore();
 
 const sp_brands = ref(counter.sp_brands);

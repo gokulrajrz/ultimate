@@ -1,20 +1,32 @@
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { useRoute } from "vue-router";
 import { useAppStore } from "../../stores/store";
+import { ref, watchEffect } from "vue";
 
-export default defineComponent({
-  setup() {
-    const route = useRoute();
-    const AppStore = useAppStore();
+const route = useRoute();
+const appStore = useAppStore();
 
-    const service = ref(AppStore.getService(<string>route.params.id));
-    return { service };
-  },
-  created() {
-      // console.log(this.service)
-  },
+const service = ref<any>(null);
+
+// Fetch service when component is initialized
+watchEffect(() => {
+  service.value = appStore.getService(route.params.id as string);
+});
+
+useHead({
+  meta: [
+    {
+      name: "title",
+      content: service.value.metaTitle,
+    },
+    {
+      name: "description",
+      content: service.value.metaDesc,
+    },
+  ],
 });
 </script>
+
 <template>
   <div class="container">
     <h1 class="text-primary text-[35px] font-bold text-center mt-14">
@@ -23,12 +35,7 @@ export default defineComponent({
     <div class="mt-10 flex flex-col lg:flex-row">
       <div class="flex justify-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
-          <v-img
-            :src="service?.img"
-            class="rounded-10"
-            height="306px"
-            cover
-          />
+          <v-img :src="service?.img" class="rounded-10" height="306px" cover />
         </div>
       </div>
 
