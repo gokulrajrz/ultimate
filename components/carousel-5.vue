@@ -9,25 +9,28 @@ export default defineComponent({
 
     const icons = ref([
       {
-        img: "/images/clients/magenta.png",
-      },
-      {
-        img: "/images/clients/mhps.jpeg",
-      },
-      {
         img: "/images/clients/enova.png",
-      },
-      {
-        img: "/images/clients/almansoori.png",
       },
       {
         img: "/images/clients/nov.png",
       },
       {
+        img: "/images/clients/almansoori.png",
+      },
+      {
         img: "/images/clients/altrad.png",
       },
       {
+        img: "/images/clients/mhps.jpeg",
+      },
+      {
         img: "/images/clients/serco.png",
+      },
+      {
+        img: "/images/clients/sinyar.png",
+      },
+      {
+        img: "/images/clients/magenta.png",
       },
       {
         img: "/images/clients/yas.png",

@@ -55,9 +55,9 @@
         >
           <div class="flex justify-center">
             <div
-              class="text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold text-center lg:text-left mb-8 w-100 mx-5"
+              class="text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold lg:text-left mb-8 w-100 mx-5"
             >
-              WHAT WE DO
+              {{ "WHAT WE DO".toUpperCase() }}
             </div>
           </div>
           <div class="px-5 text-[#474747]">
@@ -87,9 +87,9 @@
 
     <div class="flex flex-col lg:flex-row">
       <div
-        class="lg:hidden text-2xl sm:text-3xl text-primary lg:text-[35px] text-center mt-[40px] font-bold lg:text-left w-100"
+        class="lg:hidden text-2xl sm:text-3xl text-primary text-center lg:text-[35px] mt-[40px] font-bold lg:text-left w-100"
       >
-        Why Us?
+        {{ "Why Us?".toUpperCase() }}
       </div>
       <div class="flex justify-center items-center lg:w-fit my-4">
         <div class="w-[373px] lg:max-w-[373px]">
@@ -99,9 +99,9 @@
 
       <div class="px-5 lg:ml-10">
         <div
-          class="hidden lg:block text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold text-center lg:text-left mb-8 w-100"
+          class="hidden lg:block text-2xl sm:text-3xl text-primary lg:text-[35px] font-bold lg:text-left mb-8 w-100"
         >
-          Why Us?
+          {{ "Why Us?".toUpperCase() }}
         </div>
         <div class="text-[#474747]">
           It’s simply our expertise in understanding your requirement and

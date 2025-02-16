@@ -6,15 +6,14 @@
         :key="index"
         :class="[
           'drop-shadow-[0_4px_4px_0px_#00000040] py-6 px-6 flex flex-col justify-center items-center duration-200 text-[#C6282E]',
+          index != 2 && 'hidden lg:flex',
         ]"
         @mouseenter="card.hover = true"
         @mouseleave="card.hover = false"
       >
         <div
           class="pa-3 rounded-full mb-3 border-2 border-rose-500 transition-all duration-150"
-          :class="[
-            card.hover && 'text-white bg-primary-color ',
-          ]"
+          :class="[card.hover && 'text-white bg-primary-color ']"
         >
           <component :is="card.icon" class="text-[35px] !m-0" />
         </div>

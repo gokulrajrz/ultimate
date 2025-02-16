@@ -1,6 +1,17 @@
 <template>
+  <div
+    class="py-10 bg-[url('/images/bg-m.png')] lg:bg-[url('/images/bg-1.png')] bg-cover flex items-center bg-center"
+  >
+    <div class="container flex justify-center overflow-hidden">
+      <div class="text-white text-center text-[32px] font-black max-w-[880px]">
+        {{
+          "Right Equipments Delivered at the Right time with unbeatable quality & affordable pricing".toUpperCase()
+        }}
+      </div>
+    </div>
+  </div>
   <div class="container">
-    <banner />
+    <!-- <banner /> -->
 
     <h1 class="text-primary text-[35px] font-bold text-center mt-14">
       SERVICES

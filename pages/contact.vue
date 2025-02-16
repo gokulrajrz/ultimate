@@ -10,7 +10,10 @@
       <v-timeline side="end" class="text-[#474747] pr-5">
         <v-timeline-item size="small" dot-color="primary">
           <div>
-            <div>AL Rawdha Building, Old ShabiaUmm Al Quwain , U.A.E</div>
+            <div>
+              14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi,
+              Kerala, INDIA
+            </div>
             <div>sales@ultimate-equipments.com</div>
           </div>
         </v-timeline-item>
@@ -27,10 +30,7 @@
 
         <v-timeline-item size="small" dot-color="primary">
           <div>
-            <div>
-              PO Box 14664, Al-Hamra Industrial Zone-FZ Rakez, Al-Jazeera,
-              Ras-Al-Khaimah, UAE
-            </div>
+            <div>AL Rawdha Building, Old ShabiaUmm Al Quwain , U.A.E</div>
             <div>sales@ultimate-equipments.com</div>
           </div>
         </v-timeline-item>
@@ -38,8 +38,8 @@
         <v-timeline-item size="small" dot-color="primary">
           <div>
             <div>
-              14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi,
-              Kerala, INDIA
+              PO Box 14664, Al-Hamra Industrial Zone-FZ Rakez, Al-Jazeera,
+              Ras-Al-Khaimah, UAE
             </div>
             <div>sales@ultimate-equipments.com</div>
           </div>
@@ -49,8 +49,11 @@
 
     <div class="grid grid-cols-3 py-5">
       <div class="hidden pr-[110px] text-[#474747] lg:block">
-        <div>
-          <div>AL Rawdha Building, Old ShabiaUmm Al Quwain , U.A.E</div>
+        <div class="mt-10">
+          <div>
+            14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi,
+            Kerala, INDIA
+          </div>
           <div>sales@ultimate-equipments.com</div>
         </div>
         <div class="mt-10">
@@ -60,17 +63,14 @@
           </div>
           <div>sales@ultimate-equipments.com</div>
         </div>
-        <div class="mt-10">
-          <div>
-            PO Box 14664, Al-Hamra Industrial Zone-FZ Rakez, Al-Jazeera,
-            Ras-Al-Khaimah, UAE
-          </div>
+        <div>
+          <div>AL Rawdha Building, Old ShabiaUmm Al Quwain , U.A.E</div>
           <div>sales@ultimate-equipments.com</div>
         </div>
         <div class="mt-10">
           <div>
-            14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi,
-            Kerala, INDIA
+            PO Box 14664, Al-Hamra Industrial Zone-FZ Rakez, Al-Jazeera,
+            Ras-Al-Khaimah, UAE
           </div>
           <div>sales@ultimate-equipments.com</div>
         </div>
@@ -127,7 +127,9 @@
       </div>
     </div>
   </div>
-  <div class="hidden lg:block text-primary-color text-[35px] font-bold text-center lg:mt-[50px] mb-10">
+  <div
+    class="hidden lg:block text-primary-color text-[35px] font-bold text-center lg:mt-[50px] mb-10"
+  >
     FIND US
   </div>
   <g-map />

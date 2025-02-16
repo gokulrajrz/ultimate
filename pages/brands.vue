@@ -13,7 +13,7 @@
         >
           Industrial & Oil-Field Spare Parts
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in industrial" :key="i">
             <v-img :src="'/images/brands/industrial/' + i" height="62" />
           </div>
@@ -29,7 +29,7 @@
         >
           Fasteners
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in fasteners" :key="i">
             <v-img :src="'/images/brands/fasteners/' + i" height="62" />
           </div>
@@ -45,7 +45,7 @@
         >
           Power Tools & Pneumatic Tools
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in power" :key="i">
             <v-img :src="'/images/brands/power-tools/' + i" height="62" />
           </div>
@@ -61,7 +61,7 @@
         >
           Engineering & Hand Tools
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in engneering" :key="i">
             <v-img :src="'/images/brands/engneering/' + i" height="62" />
           </div>
@@ -77,7 +77,7 @@
         >
           Measuring & Inspection Tools
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in measuring" :key="i">
             <v-img :src="'/images/brands/measuring/' + i" height="62" />
           </div>
@@ -96,7 +96,7 @@
         >
           Safety Products
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in safty" :key="i">
             <v-img :src="'/images/brands/safty/' + i" height="62" />
           </div>
@@ -113,7 +113,7 @@
         >
           Lifting Equipment
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in lifting" :key="i">
             <v-img :src="'/images/brands/lifting/' + i" height="62" />
           </div>
@@ -130,7 +130,7 @@
         >
           Welding Equipment/ Cutting & Welding Consumable
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in welding" :key="i">
             <v-img :src="'/images/brands/welding/' + i" height="62" />
           </div>
@@ -148,7 +148,7 @@
         >
           Electrical & Plumbing Materials
         </div>
-        <div class="grid grid-cols-4 gap-5 w-100 pt-10">
+        <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in electrical" :key="i">
             <v-img :src="'/images/brands/electrical/' + i" height="62" />
           </div>
@@ -168,8 +168,8 @@
       class="h-[2px] w-100 bg-[#0000001A] shadow-[0px_4px_4px_0px_#0000001A] my-8"
     ></div>
 
-    <div class="grid grid-cols-4 lg:grid-cols-5 gap-5 w-100 pt-4">
-      <div v-for="i in icons" :key="i">
+    <div class="grid grid-cols-4 lg:grid-cols-6 gap-5 w-100 pt-4">
+      <div v-for="i in icons" :key="i" class="bg-white">
         <v-img :src="'/images/clients/' + i" height="62" />
       </div>
     </div>
@@ -190,7 +190,7 @@ const industrial = [
   "7.png",
   "8.jpeg",
 ];
-const fasteners = ["1.png", "2.png", "3.jpeg", "4.png", "5.png"];
+const fasteners = ["1.png", "2.png", "3.png", "4.png", "5.png"];
 const power = ["1.jpeg", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
 const engneering = [
   "1.png",
@@ -198,8 +198,8 @@ const engneering = [
   "3.png",
   "4.png",
   "5.png",
-  "6.jpeg",
-  "7.jpeg",
+  "6.png",
+  "7.png",
   "8.png",
 ];
 const measuring = ["1.png", "2.png"];
@@ -213,29 +213,42 @@ const electrical = [
   "4.png",
   "5.png",
   "6.png",
-  "7.jpeg",
-  "8.jpeg",
+  "7.png",
+  "8.png",
 ];
 
 const icons = [
-  "magenta.png",
-  "mhps.jpeg",
   "enova.png",
-  "almansoori.png",
   "nov.png",
+  "almansoori.png",
   "altrad.png",
+  "mhps.jpeg",
   "serco.png",
+  "sinyar.png",
+  "yosh.png",
+  "pom.png",
+  "airport.png",
+  "magenta.png",
+  "mubadala.png",
+  "etihad.png",
+  "ados.png",
+  "carrefour.png",
+  "dubaiairport.png",
+  "sorbonne.png",
+  "seaworld.png",
+  "8.png",
   "yas.png",
   "1.png",
-  "2.jpeg",
+  // "2.jpeg",
   "3.png",
-  "4.png",
-  "5.png",
-  "6.png",
-  "7.png",
-  "8.png",
-  "9.png",
   "10.jpeg",
-  "11.jpeg",
+  // "4.png",
+  "dubaimetro.png",
+  // "7.png",
+  "das.png",
+  // "9.png",
+  // "11.jpeg",
+  "emaar.png",
+  "favco.png",
 ];
 </script>
