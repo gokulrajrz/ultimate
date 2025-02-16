@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mt-[50px] grid grid-cols-3 lg:flex gap-6 justify-center flex-wrap"
+    class="mt-[50px] grid grid-cols-3 lg:flex gap-6 justify-center flex-wrap"
   >
     <div
       class="w-full lg:w-max flex flex-col items-center font-semibold"
@@ -14,7 +14,7 @@
         <img
           :src="prod.img"
           :alt="prod.name"
-          class="w-[75px] h-[75px] lg:w-[115px] lg:h-[115px]"
+          class="w-[75px] h-[75px] lg:w-[100px] lg:h-[100px]"
         />
       </div>
       <p :class="changeColor ? 'text-white' : ''">{{ prod.name }}</p>
