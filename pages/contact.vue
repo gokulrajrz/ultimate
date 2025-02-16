@@ -49,7 +49,7 @@
 
     <div class="grid grid-cols-3 py-5">
       <div class="hidden pr-[110px] text-[#474747] lg:block">
-        <div class="mt-10">
+        <div class="mt-15">
           <div>
             14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi,
             Kerala, INDIA
@@ -63,7 +63,7 @@
           </div>
           <div>sales@ultimate-equipments.com</div>
         </div>
-        <div>
+        <div class="mt-10">
           <div>AL Rawdha Building, Old ShabiaUmm Al Quwain , U.A.E</div>
           <div>sales@ultimate-equipments.com</div>
         </div>
