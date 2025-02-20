@@ -6,7 +6,7 @@
     <div class="mt-10 flex flex-col lg:flex-row gap-10 px-5 lg:px-10">
       <div class="flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
-          <v-img src="/images/sp-img.png" class="rounded-10" cover />
+          <v-img src="/images/sp-img-1.jpeg" class="rounded-10" cover />
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url('/images/footer-bg.png')] bg-cover">
+  <div class="bg-[url('/images/footer-bg1.png')] bg-cover">
     <div class="container">
       <div class="grid lg:grid-cols-2 gap-4">
         <div class="lg:mr-10">

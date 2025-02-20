@@ -7,7 +7,7 @@
       <div class="flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-2.jpeg"
+            src="/images/about-2-1.jpeg"
             class="rounded-10"
             height="306px"
             cover
@@ -41,7 +41,7 @@
       <div class="flex lg:hidden justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-3.jpeg"
+            src="/images/about-3-1.jpeg"
             class="rounded-10"
             height="306px"
             cover
@@ -74,7 +74,7 @@
       <div class="hidden lg:flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-3.jpeg"
+            src="/images/about-3-1.jpeg"
             class="rounded-10"
             height="306px"
             cover
