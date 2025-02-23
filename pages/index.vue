@@ -70,36 +70,29 @@
                 }}
               </div>
             </div>
-            <p class="px-5 text-[#474747]">
-              We offer extensive technical and product know-how, coupled with a
-              deep understanding of modern setup requirements. UMET has
-              specialists and consultants located throughout the UAE, ready to
-              apply their knowledge and expertise to your current and future
-              needs, and to recommend a comprehensive plan that meets your
-              growing demands. Our commitment to quality and service ensures
-              that you receive not only top-of-the-line tools and equipment but
-              also the support necessary to maximize their effectiveness in your
-              operations. At UMET, we pride ourselves on providing a wide range
-              of tools and equipment tailored to various industries, from
-              construction and manufacturing to maintenance and repair. Our
-              extensive inventory includes everything from hand tools and power
-              tools to specialized machinery, all sourced from trusted
+            <p class="text-justify">
+              At Ultimate Equipments, we take pride in being the UAE’s leading
+              supplier of high-quality metal equipment and tools for various
+              industries. Our commitment to quality and service ensures that you
+              receive not only top-of-the-line tools and equipment but also the
+              support necessary to maximize their effectiveness in your
+              operations.
+            </p>
+            <p class="text-justify mt-5">
+              Our extensive inventory includes everything from hand tools and
+              power tools to specialized machinery, all sourced from trusted
               manufacturers renowned for their reliability and performance.
-              Understanding the unique challenges faced by our clients, we take
-              a personalized approach to every project. Our team is dedicated to
-              understanding your specific requirements and delivering solutions
-              that enhance productivity and efficiency. Whether you need a
-              single tool or a complete equipment overhaul, we are here to
-              assist you every step of the way. With a focus on innovation and
-              the latest industry trends, UMET stays ahead of the curve to
-              provide you with cutting-edge solutions that drive success. Our
-              experts are continuously trained to ensure they remain
-              knowledgeable about the latest technologies and advancements,
-              enabling us to offer the best recommendations for your needs.
+            </p>
+            <p class="text-justify mt-5">
+              Our team is dedicated to understanding your specific requirements
+              and delivering solutions that improve your productivity and
+              efficiency. Whether you need a single tool or a complete equipment
+              overhaul, we are here to assist you every step of the way.
+            </p>
+            <p class="text-justify mt-5">
               Partner with UMET for all your tools and equipment needs, and
               experience a level of service and expertise that truly sets us
-              apart. Together, we can build a foundation for success that meets
-              the demands of today and prepares for the challenges of tomorrow.
+              apart.
             </p>
           </div>
         </div>
