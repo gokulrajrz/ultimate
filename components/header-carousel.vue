@@ -8,7 +8,7 @@ export default defineComponent({
 
     const onSwiper = (swiper: any) => {
       swiperInstance.value = swiper;
-    };
+    }; 
     const swiperNextSlide = () => {
       swiperInstance.value.slideNext();
     };
@@ -19,25 +19,25 @@ export default defineComponent({
       {
         title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
         desc: "Early recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in theOil-Field & Industrial sector",
-        img: ["/images/bg-banner.png","/images/bm-1.png"],
+        img: ["/images/banner/banner.jpeg","/images/banner/bm-1.jpeg"],
         link: "/service/Industrial&Oil-Field-Spare-Parts",
       },
       {
         title: "Power tools & pneumatic tools",
         desc: "We are one among the largest distributors of quality  professional tools with one of the largest range of  pneumatic and power tools",
-        img: ["/images/banner-2.png","/images/bm-2.png"],
+        img: ["/images/banner/banner-2.jpeg","/images/banner/bm-2.jpeg"],
         link: "/service/Power-Tools&Pneumatic-Tools",
       },
       {
         title: "Engineering & hand tools",
         desc: "We cater from a vast list of Engineering & Hand Tools",
-        img: ["/images/banner-3.png","/images/bm-3.png"],
+        img: ["/images/banner/banner-3.jpeg","/images/banner/bm-3.jpeg"],
         link: "/service/Engineering&Hand-Tools",
       },
       {
         title: "OUR BRANDS & CLIENTS",
         desc: "",
-        img: ["/images/banner-4.png","/images/bm-4.png"],
+        img: ["/images/banner/banner-4.jpeg","/images/banner/bm-4.jpeg"],
         link: "/brands",
       },
     ]);

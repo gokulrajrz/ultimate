@@ -76,16 +76,16 @@
     </div>
     <div class="flex justify-end text-white mb-2">
       <NuxtLink
-        to="/"
+        to="/FAQs"
         class="px-4 border-r-[1px] border-[#fff] hover:text-primary-color"
         >FAQ's</NuxtLink
       >
-      <NuxtLink
+      <!-- <NuxtLink
         to="/"
         class="px-4 border-r-[1px] border-[#fff] hover:text-primary-color"
         >Sitemap</NuxtLink
-      >
-      <NuxtLink to="/" class="px-4 hover:text-primary-color">Contact</NuxtLink>
+      > -->
+      <NuxtLink to="/contact" class="px-4 hover:text-primary-color">Contact</NuxtLink>
     </div>
     <div class="bg-black flex justify-center py-4">
       <div>© Copyright ULTIMATE EQUIPMENTS</div>

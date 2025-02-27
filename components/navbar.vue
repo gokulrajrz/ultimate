@@ -155,14 +155,14 @@ const onClickOutside = () => {
                   leave-to-class="opacity-0 scale-95"
                 >
                   <div
-                    class="absolute bg-primary-color text-white rounded-lg bottom-0 translate-y-[100%] px-5 py-3 w-[200px]"
+                    class="absolute bg-white shadow-xl rounded-lg border bottom-0 translate-y-[100%] px-8 py-5 w-[250px]"
                     v-if="showDropdown"
                   >
                     <ul>
                       <li
                         v-for="(item, i) in products"
                         :key="i"
-                        class="mt-2 leading-[1.2] hover:text-[#ffc2c2]"
+                        class="mt-2 leading-[1.2] hover:text-primary-color py-2 border-b-[1px] border-[#cccccc]"
                       >
                         <NuxtLink :to="`/service/${item.id}`">{{
                           item.name

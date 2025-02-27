@@ -78,18 +78,18 @@
               support necessary to maximize their effectiveness in your
               operations.
             </p>
-            <p class="text-justify mt-5">
+            <p class="text-justify mt-3">
               Our extensive inventory includes everything from hand tools and
               power tools to specialized machinery, all sourced from trusted
               manufacturers renowned for their reliability and performance.
             </p>
-            <p class="text-justify mt-5">
+            <p class="text-justify mt-3">
               Our team is dedicated to understanding your specific requirements
               and delivering solutions that improve your productivity and
               efficiency. Whether you need a single tool or a complete equipment
               overhaul, we are here to assist you every step of the way.
             </p>
-            <p class="text-justify mt-5">
+            <p class="text-justify mt-3">
               Partner with UMET for all your tools and equipment needs, and
               experience a level of service and expertise that truly sets us
               apart.
@@ -97,42 +97,45 @@
           </div>
         </div>
       </div>
-
-      <div class="hidden lg:block">
+      <div class="justify-center hidden lg:flex">
+        <div
+          class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[900px] text-center mb-8 mx-5"
+        >
+          {{ "ultimate Equipments and tools trading l.l.c".toUpperCase() }}
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center">
         <img
           src="/images/abt-home-1.jpeg"
           alt=""
-          class="h-[306px] w-[373px] object-cover about-home rounded-[10px]"
+          class="h-[306px] min-w-[373px] object-cover about-home- rounded-[10px]"
         />
-        <div class="flex justify-center">
-          <div
-            class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[595px] text-center mb-8 mx-5"
-          >
-            {{ "ultimate Equipments and tools trading l.l.c".toUpperCase() }}
-          </div>
+        <div class="ml-10">
+          <p class="text-justify">
+            At Ultimate Equipments, we take pride in being the UAE’s leading
+            supplier of high-quality metal equipment and tools for various
+            industries. Our commitment to quality and service ensures that you
+            receive not only top-of-the-line tools and equipment but also the
+            support necessary to maximize their effectiveness in your
+            operations.
+          </p>
+          <p class="text-justify mt-3">
+            Our extensive inventory includes everything from hand tools and
+            power tools to specialized machinery, all sourced from trusted
+            manufacturers renowned for their reliability and performance.
+          </p>
+          <p class="text-justify mt-3">
+            Our team is dedicated to understanding your specific requirements
+            and delivering solutions that improve your productivity and
+            efficiency. Whether you need a single tool or a complete equipment
+            overhaul, we are here to assist you every step of the way.
+          </p>
+          <p class="text-justify mt-3">
+            Partner with UMET for all your tools and equipment needs, and
+            experience a level of service and expertise that truly sets us
+            apart.
+          </p>
         </div>
-        <p class="text-justify">
-          At Ultimate Equipments, we take pride in being the UAE’s leading
-          supplier of high-quality metal equipment and tools for various
-          industries. Our commitment to quality and service ensures that you
-          receive not only top-of-the-line tools and equipment but also the
-          support necessary to maximize their effectiveness in your operations.
-        </p>
-        <p class="text-justify mt-5">
-          Our extensive inventory includes everything from hand tools and power
-          tools to specialized machinery, all sourced from trusted manufacturers
-          renowned for their reliability and performance.
-        </p>
-        <p class="text-justify mt-5">
-          Our team is dedicated to understanding your specific requirements and
-          delivering solutions that improve your productivity and efficiency.
-          Whether you need a single tool or a complete equipment overhaul, we
-          are here to assist you every step of the way.
-        </p>
-        <p class="text-justify mt-5">
-          Partner with UMET for all your tools and equipment needs, and
-          experience a level of service and expertise that truly sets us apart.
-        </p>
       </div>
 
       <div class="mt-[70px] mb-[40px] bg-[#d9d9d9] h-[1px]"></div>
