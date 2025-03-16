@@ -8,79 +8,39 @@ export default defineComponent({
     const { smAndDown, md } = useDisplay();
 
     const icons = ref([
-      {
-        img: "/images/clients/enova.png",
-      },
-      {
-        img: "/images/clients/nov.png",
-      },
-      {
-        img: "/images/clients/almansoori.png",
-      },
-      {
-        img: "/images/clients/altrad.png",
-      },
-      {
-        img: "/images/clients/mhps.jpeg",
-      },
-      {
-        img: "/images/clients/serco.png",
-      },
-      {
-        img: "/images/clients/sinyar.png",
-      },
-      {
-        img: "/images/clients/magenta.png",
-      },
-      {
-        img: "/images/clients/yas.png",
-      },
-      {
-        img: "/carousal/1.jpeg",
-      },
-      {
-        img: "/carousal/2.jpeg",
-      },
-      {
-        img: "/carousal/3.jpeg",
-      },
-      {
-        img: "/carousal/4.jpeg",
-      },
-      {
-        img: "/carousal/5.jpeg",
-      },
-      {
-        img: "/carousal/6.jpeg",
-      },
-      {
-        img: "/carousal/7.jpeg",
-      },
-      {
-        img: "/carousal/8.jpeg",
-      },
-      {
-        img: "/carousal/9.jpeg",
-      },
-      {
-        img: "/carousal/10.jpeg",
-      },
-      {
-        img: "/carousal/11.jpeg",
-      },
-      {
-        img: "/carousal/12.jpeg",
-      },
-      {
-        img: "/carousal/13.jpeg",
-      },
-      {
-        img: "/carousal/14.png",
-      },
-      {
-        img: "/carousal/15.jpeg",
-      },
-    ]);
+  "/images/clients/1.png",
+  "/images/clients/2.png",
+  "/images/clients/3.png",
+  "/images/clients/4.png",
+  "/images/clients/5.png",
+  "/images/clients/6.png",
+  "/images/clients/7.png",
+  "/images/clients/8.png",
+  "/images/clients/9.png",
+  "/images/clients/10.png",
+  "/images/clients/11.png",
+  "/images/clients/12.png",
+  "/images/clients/13.png",
+  "/images/clients/14.png",
+  "/images/clients/15.png",
+  "/images/clients/16.png",
+  "/images/clients/17.png",
+  "/images/clients/18.png",
+  "/images/clients/19.png",
+  "/images/clients/20.png",
+  "/images/clients/21.png",
+  "/images/clients/22.png",
+  "/images/clients/23.png",
+  "/images/clients/24.png",
+  "/images/clients/25.png",
+  "/images/clients/26.png",
+  "/images/clients/27.png",
+  "/images/clients/28.png",
+  "/images/clients/29.png",
+  "/images/clients/30.png",
+  "/images/clients/31.png",
+  "/images/clients/32.png",
+]);
 
     const swiperInstance = ref();
     const onSwiper = (swiper: any) => {
@@ -132,7 +92,7 @@ export default defineComponent({
       >
         <SwiperSlide v-for="(icon, i) in icons" :key="i" class="h-[60px] px-2">
           <div class="h-[60px] flex items-center">
-            <v-img :src="icon.img"></v-img>
+            <v-img :src="icon"></v-img>
           </div>
         </SwiperSlide>
       </Swiper>
