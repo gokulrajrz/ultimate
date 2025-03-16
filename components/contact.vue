@@ -10,48 +10,61 @@
           <div class="font-bold text-center">
             ULTIMATE METAL EQUIPMENTS AND TOOLS TRADING L.L.C
           </div>
-          <div class="text-center">
-            OFFICE: 07, PLOT NO: 92, MUSSAFAH: M37,
-          </div>
-          <div class="text-center">
-            PO BOX NO: 8465, ABUDHABI - UAE
-          </div>
+          <div class="text-center">OFFICE: 07, PLOT NO: 92, MUSSAFAH: M37,</div>
+          <div class="text-center">PO BOX NO: 8465, ABUDHABI - UAE</div>
         </div>
 
         <div class="text-base ml-3 mb-4 hidden lg:block">
           <div class="font-bold">
             ULTIMATE METAL EQUIPMENTS AND TOOLS TRADING L.L.C
           </div>
-          <div class="">
-            OFFICE: 07, PLOT NO: 92, MUSSAFAH: M37,
-          </div>
-          <div class="">
-            PO BOX NO: 8465, ABUDHABI - UAE
-          </div>
+          <div class="">OFFICE: 07, PLOT NO: 92, MUSSAFAH: M37,</div>
+          <div class="">PO BOX NO: 8465, ABUDHABI - UAE</div>
         </div>
       </div>
 
       <div class="lg:px-5 flex flex-col items-center">
         <div class="w-max">
           <div class="flex items-center">
-            <i-v-phone class="text-primary-color" />
-            <div class="ml-3">Mob 0502144438</div>
+            <i-v-phone class="text-primary-color"></i-v-phone>
+            <a
+              href="tel:+971502144438"
+              class="ml-3 text-blue-500 hover:underline"
+            >
+              Mob +971 502144438
+            </a>
           </div>
           <div class="flex items-center mt-3">
-            <i-tel class="text-primary-color" />
-            <div class="ml-3">Tel +971 2 555 8890</div>
+            <i-tel class="text-primary-color"></i-tel>
+            <a
+              href="tel:+97125558890"
+              class="ml-3 text-blue-500 hover:underline"
+            >
+              Tel +971 2 555 8890
+            </a>
           </div>
           <div class="flex items-center mt-3">
-            <i-v-phone-2 class="text-primary-color" />
-            <div class="ml-3">Whatsapp 056 773 6123</div>
+            <i-v-phone-2 class="text-primary-color"></i-v-phone-2>
+            <a
+              href="https://wa.me/971567736123"
+              target="_blank"
+              class="ml-3 text-green-500 hover:underline"
+            >
+              Whatsapp +971 56 773 6123
+            </a>
           </div>
         </div>
       </div>
 
       <div class="flex items-center justify-center">
         <div class="flex items-center mt-4 w-max">
-          <i-mail class="text-primary-color" />
-          <div class="ml-3 text-center w-max">E-mail: sales@ultimate-equipments.com</div>
+          <i-mail class="text-primary-color"></i-mail>
+          <a
+            href="mailto:info@ultimate-equipments.com"
+            class="ml-3 text-blue-500 hover:underline w-max text-center"
+          >
+            E-mail: info@ultimate-equipments.com
+          </a>
         </div>
       </div>
     </div>

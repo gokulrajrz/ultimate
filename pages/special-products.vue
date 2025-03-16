@@ -3,7 +3,7 @@
     <h1 class="text-primary text-[35px] font-bold text-center mt-14">
       {{ "special products & special brands".toUpperCase() }}
     </h1>
-    <div class="mt-10 flex flex-col lg:flex-row gap-10 px-5 lg:px-10">
+    <div class="mt-10 flex flex-col lg:flex-row gap-10 px-5 lg:px-10 text-justify">
       <div class="flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img src="/images/sp-img-1.jpeg" class="rounded-10" cover />

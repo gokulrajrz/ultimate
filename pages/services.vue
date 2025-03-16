@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     class="py-10 bg-[url('/images/bg-m.png')] lg:bg-[url('/images/bg-1.png')] bg-cover flex items-center bg-center"
   >
     <div class="container flex justify-center overflow-hidden">
@@ -9,7 +9,7 @@
         }}
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="container">
     <!-- <banner /> -->
 
