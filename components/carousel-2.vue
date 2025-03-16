@@ -28,13 +28,13 @@ const reviews = ref([
     img: "/images/testimonials/Anvar.jpeg",
     name: "Mr. Anvar Husain",
     company: "Polo Garments",
-    desc: "When it comes to Kitchen Equipments there are loads of commentators that talk a good game, but Ultimate help you make it happen.",
+    desc: "We've been sourcing industrial spare parts from Ultimate Equipments for over a year, and their quality has never disappointed us. The durability of their equipments are unmatched, making them our go-to supplier for all our machinery needs.",
   },
   {
     img: "/images/testimonials/Shamsudeen.jpeg",
     name: "Shamsudeen Thekkethil",
     company: "Western Kitchen",
-    desc: "We've been sourcing industrial spare parts from Ultimate Equipments for over a year, and their quality has never disappointed us. The durability of their equipments are unmatched, making them our go-to supplier for all our machinery needs.",
+    desc: "When it comes to Kitchen Equipments there are loads of commentators that talk a good game, but Ultimate help you make it happen.",
   },
   // {
   //   img: "/images/testimonials/Anvar.jpeg",
@@ -43,16 +43,16 @@ const reviews = ref([
   //   desc: "The Ultimate team is always ready to help, ensuring we get exactly what we need on time.",
   // },
   {
-    img: "/images/testimonials/person.png",
-    name: "",
+    img: "/images/testimonials/Reji.jpeg",
+    name: "Reji.A",
     company: "Extent Properties and General Maintenance Company llc",
-    desc: "We compared several suppliers before choosing Ultimate Equipments and they offer the best prices without compromising on quality.",
+    desc: "Top-notch service and exceptional quality products! Ultimate Metal Equipment and Tools has never let us down with their timely deliveries and competitive prices.",
   },
   {
-    img: "/images/testimonials/person.png",
+    img: "/images/testimonials/hari.jpeg",
     name: "Hari Raj",
-    company: "Ennova",
-    desc: "As a construction firm, we rely on high-quality materials spare parts. Ultimate has been a trusted partner, supplying us with good quality products.",
+    company: "Enova",
+    desc: "The team at Ultimate Metal Equipment and Tools is highly professional. Their customer support and product knowledge have been a great asset to us.",
   },
 ]);
 </script>

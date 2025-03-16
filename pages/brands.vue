@@ -128,7 +128,7 @@
         <div
           class="!w-[100%] lg:!w-[288px] h-max font-bold text-xl/6 pa-4 bg-primary lg:rounded-bl-[30px] rounded-[5px] lg:rounded-[0px] text-center"
         >
-          Welding Equipment/ Cutting & Welding Consumable
+          Welding and Cutting Equipment
         </div>
         <div class="grid grid-cols-4 gap-5 w-100 pt-10 lg:pl-10">
           <div v-for="i in welding" :key="i">
@@ -196,16 +196,16 @@ useHead({
 
 const industrial = [
   "1.png",
-  "2.jpeg",
-  "3.jpeg",
+  "2.png",
+  "3.png",
   "4.png",
   "5.png",
   "6.png",
   "7.png",
-  "8.jpeg",
+  "8.png",
 ];
 const fasteners = ["1.png", "2.png", "3.png", "4.png", "5.png"];
-const power = ["1.jpeg", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
+const power = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"];
 const engneering = [
   "1.png",
   "2.png",
@@ -222,7 +222,7 @@ const lifting = ["1.png", "2.png", "3.png", "4.png"];
 const welding = ["1.png", "2.png", "3.jpeg"];
 const electrical = [
   "1.png",
-  "2.jpeg",
+  "2.png",
   "3.png",
   "4.png",
   "5.png",
@@ -253,16 +253,16 @@ const icons = [
   "8.png",
   "yas.png",
   "1.png",
-  // "2.jpeg",
   "3.png",
   "10.jpeg",
-  // "4.png",
   "dubaimetro.png",
-  // "7.png",
   "das.png",
-  // "9.png",
-  // "11.jpeg",
   "emaar.png",
   "favco.png",
+  "12.png",
+  "13.png",
+  "14.png",
+  "15.png",
+  "16.png",
 ];
 </script>

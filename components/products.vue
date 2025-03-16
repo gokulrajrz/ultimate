@@ -49,7 +49,7 @@
           class="w-100 my-auto"
         >
           <SwiperSlide v-for="(pdt, i) in products" :key="i">
-            <div class="flex">
+            <div class="flex px-5">
               <div
                 class="border-primary-color min-w-[126px] h-[226px] border-[1px]"
               ></div>
@@ -60,7 +60,7 @@
                 <div class="text-[26px] font-medium mt-5">
                   {{ pdt.name.toUpperCase() }}
                 </div>
-                <div class="mt-6 w-100">
+                <div class="mt-6 w-100 text-justify">
                   {{ pdt.desc }}
                 </div>
                 <NuxtLink :to="`/service/${pdt.id}`">

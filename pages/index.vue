@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-carousel />
     <banner />
     <div
       class="bg-[url('/images/bg-m2.png')] lg:bg-[url('/images/special-products-bg.jpg')] bg-[100%_auto] lg:bg-cover flex-col items-center py-12 flex"
@@ -66,16 +67,16 @@
                 class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[595px] text-center mb-8 mx-5"
               >
                 {{
-                  "ultimate Equipments and tools trading l.l.c".toUpperCase()
+                  "ultimate metal Equipments and tools trading l.l.c".toUpperCase()
                 }}
               </div>
             </div>
             <p class="text-justify">
-              At Ultimate Equipments, we take pride in being the UAE’s leading
-              supplier of high-quality metal equipment and tools for various
-              industries. Our commitment to quality and service ensures that you
-              receive not only top-of-the-line tools and equipment but also the
-              support necessary to maximize their effectiveness in your
+              At Ultimate Metal Equipments, we take pride in being the UAE’s
+              leading supplier of high-quality metal equipment and tools for
+              various industries. Our commitment to quality and service ensures
+              that you receive not only top-of-the-line tools and equipment but
+              also the support necessary to maximize their effectiveness in your
               operations.
             </p>
             <p class="text-justify mt-3">
@@ -101,7 +102,9 @@
         <div
           class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[900px] text-center mb-8 mx-5"
         >
-          {{ "ultimate Equipments and tools trading l.l.c".toUpperCase() }}
+          {{
+            "ultimate metal Equipments and tools trading l.l.c".toUpperCase()
+          }}
         </div>
       </div>
       <div class="hidden lg:flex items-center">
@@ -112,11 +115,11 @@
         />
         <div class="ml-10">
           <p class="text-justify">
-            At Ultimate Equipments, we take pride in being the UAE’s leading
-            supplier of high-quality metal equipment and tools for various
-            industries. Our commitment to quality and service ensures that you
-            receive not only top-of-the-line tools and equipment but also the
-            support necessary to maximize their effectiveness in your
+            At Ultimate Metal Equipments, we take pride in being the UAE’s
+            leading supplier of high-quality metal equipment and tools for
+            various industries. Our commitment to quality and service ensures
+            that you receive not only top-of-the-line tools and equipment but
+            also the support necessary to maximize their effectiveness in your
             operations.
           </p>
           <p class="text-justify mt-3">
@@ -234,6 +237,31 @@ const clients = ref([
   "/images/clients/mhps.jpeg",
   "/images/clients/serco.png",
   "/images/clients/sinyar.png",
+  "/images/clients/yosh.png",
+  "/images/clients/pom.png",
+  "/images/clients/airport.png",
+  "/images/clients/magenta.png",
+  "/images/clients/mubadala.png",
+  "/images/clients/etihad.png",
+  "/images/clients/ados.png",
+  "/images/clients/carrefour.png",
+  "/images/clients/dubaiairport.png",
+  "/images/clients/sorbonne.png",
+  "/images/clients/seaworld.png",
+  "/images/clients/8.png",
+  "/images/clients/yas.png",
+  "/images/clients/1.png",
+  "/images/clients/3.png",
+  "/images/clients/10.jpeg",
+  "/images/clients/dubaimetro.png",
+  "/images/clients/das.png",
+  "/images/clients/emaar.png",
+  "/images/clients/favco.png",
+  "/images/clients/12.png",
+  "/images/clients/13.png",
+  "/images/clients/14.png",
+  "/images/clients/15.png",
+  "/images/clients/16.png",
 ]);
 
 const icons: string[] = clients.value;

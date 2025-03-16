@@ -50,9 +50,10 @@
       </v-timeline>
     </div>
 
-    <div class="grid grid-cols-3 py-5">
-      <div class="hidden pr-[110px] text-[#474747] lg:block">
-        <div class="mt-15">
+    <div class="grid grid-cols-3 py-5 gap-5">
+      <div class="hidden pr-[110px] text-[#474747] lg:block border-r-[1px] border-[#dddddd] mr-5">
+        <h2 class="text-[28px] font-semibold text-[#111111] !text-center lg:!text-left !mt-7 lg:!mt-0">Our Branches</h2>
+        <div class="mt-5">
           <div>
             14 - Tower II, TransAsia Cyber Park, Infopark Phase-2, Kochi, Kerala, INDIA
           </div>

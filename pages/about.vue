@@ -21,15 +21,17 @@
             <div
               class="text-2xl sm:text-3xl lg:text-[35px] font-bold max-w-[595px] text-center mb-8 mx-5"
             >
-              {{ "ultimate Equipments and tools trading l.l.c".toUpperCase() }}
+              {{
+                "ultimate metal Equipments and tools trading l.l.c".toUpperCase()
+              }}
             </div>
           </div>
           <div class="px-5 text-[#474747]">
             We offer extensive technical and product know how, coupled with a
-            deep understanding of modern setup requirement. UMET has specialists
-            / consultants located throughout the UAE, ready to apply their
-            knowledge and expertise to your current and future needs, and to
-            recommend a comprehensive plan that meets your growing demands.
+            deep understanding of modern setup requirement. UMET has
+            specialists/consultants located throughout the UAE, ready to apply
+            their knowledge and expertise to your current and future needs, and
+            to recommend a comprehensive plan that meets your growing demands.
           </div>
         </div>
       </div>

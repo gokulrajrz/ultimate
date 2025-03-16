@@ -29,17 +29,17 @@
       </div>
 
       <div class="flex">
-        <div class="mt-[28px] lg:mt-0 flex flex-col">
+        <div class="mt-[28px] lg:mt-0 flex flex-col text-justify">
           <div class="px-5 pt-[20px] lg:!pt-[0px] text-[#474747] lg:ml-7">
             <p>
               Planning a new facility or reorganizing an existing one is a
               daunting task. We offer extensive technical and product know how,
               coupled with a deep understanding of modern setup requirement.
-              UMET has specialists / consultants located throughout the UAE,
+              UMET has specialists/consultants located throughout the UAE,
               ready to apply their knowledge and expertise to your current and
               future needs, and to recommend a comprehensive plan that meets
               your growing demands. An accurate layout is an important step to
-              maximize your space, efﬁciency and proﬁtability.A good facility
+              maximize your space, efﬁciency and proﬁtability. A good facility
               design saves you from costly mistakes and prevents your project
               from being delayed.
             </p>

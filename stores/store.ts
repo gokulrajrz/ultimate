@@ -7,7 +7,7 @@ export const useAppStore = defineStore("app", {
         metaTitle: "Industrial & Oil-Field Spare Parts | Ultimate Equipments",
         metaDesc:
           "Leading supplier of industrial & oil-field spare parts in UAE. We ensure top-quality protection for multinational workforces in construction & industrial sectors.",
-        desc: "EARLY recognition for the need of proper protection to the ever growing multi-national work force not only in the Construction field but also in the Oilfield & Industrial sector",
+        desc: "Industrial and oil-field spare parts refer to components, equipment, and tools that are essential for the smooth operation and maintenance of industrial machinery and oil-field equipment. These spare parts play a crucial role in ensuring the reliability, efficiency, and longevity of various systems in industries and oil exploration and production",
         points: [
           "Bearings",
           "Spacers",
@@ -27,7 +27,7 @@ export const useAppStore = defineStore("app", {
         name: "Fasteners",
         metaTitle: "Fasteners Suppliers in Dubai, UAE | Ultimate Equipments",
         metaDesc:
-          "Reliable fasteners supplier in Dubai, UAE. Get high-quality industrial fasteners for construction, oilfield, and manufacturing needs. Contact us today!",
+          "Reliable fasteners supplier in Dubai, UAE. Get high-quality industrial fasteners for construction, oil-field, and manufacturing needs. Contact us today!",
         desc: "This is one of the products with our own  production units in India as well and  hence the expertise to the core maximum.  Below are few of the products we cater in  this category",
         points: [
           "Stud Bolts",
@@ -36,7 +36,7 @@ export const useAppStore = defineStore("app", {
           "SS Plates",
           "Threaded Rods",
           "Pipe Clamps",
-          "Hex Head Cap Screws",
+          "Socket head Cap Screws",
           "Self-Tapping Screws",
           "U Bolts/ J Bolts/ L Bolts",
         ],
@@ -87,7 +87,7 @@ export const useAppStore = defineStore("app", {
       },
       {
         id: "5",
-        name: "Measuring&Inspection-Tools",
+        name: "Measuring & Inspection Tools",
         metaTitle: "Measuring & Inspection Tools in UAE | UMET",
         metaDesc:
           "Trusted supplier of measuring & inspection tools in UAE. Our tools include measuring tape, calipers, hardness testers, micro meters, set squares, etc. Call us!",
@@ -111,7 +111,7 @@ export const useAppStore = defineStore("app", {
         metaTitle: "Industrial Safety Products in UAE | UMET",
         metaDesc:
           "Leading supplier of industrial safety products in UAE. Get top-quality, safety gear shoes, masks & others equipment for construction. Contact us today!",
-        desc: "Early recognition for the need of proper protection to the ever  growing multi-national work force not only in the Construction  field but also in the Oilfield & Industrial sector; resulted in us  bringing in TOP names in SAFETY PRODUCTS today namely3M  (AO Safety, EAR, Peltor&Safewaze), ANSELL, JCB, HONEYWELL. We understand the importance of SAFETY to the end user and  therefore have selected some of the finest products in the  market along with complete range i.e. HEAD to TOE protection.  Our range of Safety Eyewear, Respirators and Hearing Protection  has been carefully put together taking into consideration the  Ergonomic Features, Local Environment, Demographics and  Fashion at the same time not compromising on the SAFETY  STANDARDS which meet with CE or ANSI/CSA standard. Few of  our products are",
+        desc: "Early recognition for the need of proper protection to the ever  growing multi-national work force not only in the Construction  field but also in the Oil-field & Industrial sector; resulted in us  bringing in TOP names in SAFETY PRODUCTS today namely 3M  (AO Safety, EAR, Peltor & Safewaze), ANSELL, JCB, HONEYWELL. We understand the importance of SAFETY to the end user and  therefore have selected some of the finest products in the  market along with complete range i.e. HEAD to TOE protection.  Our range of Safety Eyewear, Respirators and Hearing Protection  has been carefully put together taking into consideration the  Ergonomic Features, Local Environment, Demographics and  Fashion at the same time not compromising on the SAFETY  STANDARDS which meet with CE or ANSI/CSA standard",
         points: [
           "Coveralls",
           "Safety Vests",
@@ -148,7 +148,7 @@ export const useAppStore = defineStore("app", {
       },
       {
         id: "Welding-Equipment-Cutting&Welding-Consumable",
-        name: "Welding Equipment/ Cutting & Welding Consumable",
+        name: "Welding and Cutting Equipment",
         metaTitle: "Welding Equipment Suppliers in Dubai, UAE | UMET",
         metaDesc:
           "Top welding equipment suppliers in Dubai, UAE. Get premium cutting & welding consumables for all industrial & construction needs. Contact us today!",
@@ -175,7 +175,8 @@ export const useAppStore = defineStore("app", {
         id: "Electrical&Plumbing-Materials",
         name: "Electrical & Plumbing Materials",
         metaTitle: "Plumbing Items & Electrical Materials in Dubai, UAE | UMET",
-        metaDesc: "Reliable supplier of plumbing items & electrical materials in Dubai, UAE. Get high-quality products for your construction & industrial projects.",
+        metaDesc:
+          "Reliable supplier of plumbing items & electrical materials in Dubai, UAE. Get high-quality products for your construction & industrial projects.",
         desc: "Ultimate Equipments offers an extensive range of high-quality electric and plumbing materials like electrical cables, pipes & fittings, sanitary fittings, breakers, and more to meet your needs. Below are some of the products we cater in this category",
         points: [
           "Electrical Cables",
