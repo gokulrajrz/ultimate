@@ -28,7 +28,7 @@ const imgs = [...props.imgs, ...props.imgs];
 }
 
 .infinity-scroll-inner {
-  animation: scroll 90s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 
 @keyframes scroll {

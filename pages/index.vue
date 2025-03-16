@@ -171,7 +171,7 @@
         OUR BRANDS
       </div>
       <!-- <carousel3 :icons="brands" /> -->
-      <infinity-scroll :imgs="brands" />
+      <brand-scroll :imgs="brands" />
 
       <div
         class="my-15 h-[2px] bg-[#d9d9d9] shadow-[0px_4px_4px_0px_#0000001A] w-100"
@@ -230,38 +230,38 @@ const brands = ref([
 ]);
 
 const clients = ref([
-  "/images/clients/enova.png",
-  "/images/clients/nov.png",
-  "/images/clients/almansoori.png",
-  "/images/clients/altrad.png",
-  "/images/clients/mhps.jpeg",
-  "/images/clients/serco.png",
-  "/images/clients/sinyar.png",
-  "/images/clients/yosh.png",
-  "/images/clients/pom.png",
-  "/images/clients/airport.png",
-  "/images/clients/magenta.png",
-  "/images/clients/mubadala.png",
-  "/images/clients/etihad.png",
-  "/images/clients/ados.png",
-  "/images/clients/carrefour.png",
-  "/images/clients/dubaiairport.png",
-  "/images/clients/sorbonne.png",
-  "/images/clients/seaworld.png",
-  "/images/clients/8.png",
-  "/images/clients/yas.png",
   "/images/clients/1.png",
+  "/images/clients/2.png",
   "/images/clients/3.png",
-  "/images/clients/10.jpeg",
-  "/images/clients/dubaimetro.png",
-  "/images/clients/das.png",
-  "/images/clients/emaar.png",
-  "/images/clients/favco.png",
+  "/images/clients/4.png",
+  "/images/clients/5.png",
+  "/images/clients/6.png",
+  "/images/clients/7.png",
+  "/images/clients/8.png",
+  "/images/clients/9.png",
+  "/images/clients/10.png",
+  "/images/clients/11.png",
   "/images/clients/12.png",
   "/images/clients/13.png",
   "/images/clients/14.png",
   "/images/clients/15.png",
   "/images/clients/16.png",
+  "/images/clients/17.png",
+  "/images/clients/18.png",
+  "/images/clients/19.png",
+  "/images/clients/20.png",
+  "/images/clients/21.png",
+  "/images/clients/22.png",
+  "/images/clients/23.png",
+  "/images/clients/24.png",
+  "/images/clients/25.png",
+  "/images/clients/26.png",
+  "/images/clients/27.png",
+  "/images/clients/28.png",
+  "/images/clients/29.png",
+  "/images/clients/30.png",
+  "/images/clients/31.png",
+  "/images/clients/32.png",
 ]);
 
 const icons: string[] = clients.value;
