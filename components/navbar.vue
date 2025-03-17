@@ -41,6 +41,10 @@ const drawerItems = ref([
   { title: "ABOUT US", link: "/about" },
   { title: "OUR PRODUCTS", link: "/products" },
   { title: "SERVICES", link: "/services" },
+  {
+    title: "SPECIAL PRODUCTS",
+    link: "/special-products",
+  },
   { title: "OUR BRANDS", link: "/brands" },
   { title: "CONTACT US", link: "/contact" },
 ]);
@@ -89,6 +93,7 @@ const onClickOutside = () => {
       :to="item.link"
       @click="drawer = !drawer"
       v-ripple
+      :class="[route.path == item.link ? 'text-primary-color' : '']"
     >
       {{ item.title }}
     </NuxtLink>

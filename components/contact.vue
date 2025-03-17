@@ -57,26 +57,15 @@
           <div class="flex items-center mt-4 w-max">
             <i-mail class="text-primary-color"></i-mail>
             <a
-              href="mailto:info@ultimate-equipments.com"
+              href="mailto:sales@ultimate-equipments.com"
               class="ml-3 text-blue-500 hover:underline w-max text-center"
             >
-              E-mail: info@ultimate-equipments.com
+              E-mail: sales@ultimate-equipments.com
             </a>
           </div>
         </div>
       </div>
 
-      <!-- <div class="flex items-center justify-center">
-        <div class="flex items-center mt-4 w-max">
-          <i-mail class="text-primary-color"></i-mail>
-          <a
-            href="mailto:info@ultimate-equipments.com"
-            class="ml-3 text-blue-500 hover:underline w-max text-center"
-          >
-            E-mail: info@ultimate-equipments.com
-          </a>
-        </div>
-      </div> -->
     </div>
     <div
       class="border-4 border-primary-color shadow-[4px_0px_4px_0px_#00000040]"

@@ -22,7 +22,7 @@ const swiperPrevSlide = () => {
 const items = ref([
   {
     title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
-    desc: "Early recognition for the need of proper protection to the ever-growing multi-national workforce...",
+    desc: "Industrial and oil-field spare parts refer to components, equipment, and tools that are essential for the smooth operation and maintenance of industrial machinery and oil-field equipment",
     img: ["/images/banner/banner.jpeg", "/images/banner/bm-1.jpeg"],
     link: "/service/Industrial&Oil-Field-Spare-Parts",
   },
@@ -46,11 +46,11 @@ const items = ref([
   },
 ]);
 
-onMounted(() => {
-  setInterval(() => {
-    swiperNextSlide();
-  }, 8000);
-});
+// onMounted(() => {
+//   setInterval(() => {
+//     swiperNextSlide();
+//   }, 8000);
+// });
 </script>
 
 <template>
@@ -73,16 +73,26 @@ onMounted(() => {
             <img class="lg:hidden h-100 w-100" :src="item.img[1]" />
             <img class="hidden lg:block h-100 w-100" :src="item.img[0]" />
           </div>
-          <div class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]">
+          <div
+            class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]"
+          >
             <div class="text-white flex flex-col items-center">
-              <div class="text-3xl md:text-5xl font-bold mb-7 text-center">
+              <div class="text-3xl md:text-5xl font-bold mb-7 text-center"
+              :class="[i == 3 ? '-mt-12' : 'mt-5']"
+              >
                 {{ item.title.toUpperCase() }}
               </div>
-              <div class="md:text-[22px] max-w-[723px] leading-7 font-bold text-center">
+              <div
+                class="md:text-[22px] max-w-[723px] leading-7 font-bold text-center"
+              >
                 {{ item.desc }}
               </div>
             </div>
-            <NuxtLink class="mt-5 w-fit rounded-[50px] lg:rounded-[10px] overflow-hidden" :to="item.link">
+            <NuxtLink
+              class="w-fit rounded-[50px] lg:rounded-[10px] overflow-hidden"
+              :class="[i == 3 ? '-mt-3' : 'mt-5']"
+              :to="item.link"
+            >
               <v-btn>Details</v-btn>
             </NuxtLink>
           </div>
