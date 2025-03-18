@@ -28,7 +28,7 @@ const items = ref([
   },
   {
     title: "Power tools & pneumatic tools",
-    desc: "We are one among the largest distributors of quality professional tools...",
+    desc: "We are one among the largest distributors of quality professional tools.",
     img: ["/images/banner/banner-2.jpeg", "/images/banner/bm-2.jpeg"],
     link: "/service/Power-Tools&Pneumatic-Tools",
   },
@@ -46,15 +46,15 @@ const items = ref([
   },
 ]);
 
-// onMounted(() => {
-//   setInterval(() => {
-//     swiperNextSlide();
-//   }, 8000);
-// });
+onMounted(() => {
+  setInterval(() => {
+    swiperNextSlide();
+  }, 8000);
+});
 </script>
 
 <template>
-  <div class="flex flex-col relative h-[457px]">
+  <div class="flex flex-col relative section-header">
     <Swiper
       @swiper="onSwiper"
       :slides-per-view="1"
@@ -68,7 +68,7 @@ const items = ref([
       class="w-100 !absolute"
     >
       <SwiperSlide v-for="(item, i) in items" :key="i">
-        <div class="h-[457px] relative">
+        <div class="section-header relative">
           <div class="w-100 h-100 absolute">
             <img class="lg:hidden h-100 w-100" :src="item.img[1]" />
             <img class="hidden lg:block h-100 w-100" :src="item.img[0]" />
@@ -77,13 +77,14 @@ const items = ref([
             class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]"
           >
             <div class="text-white flex flex-col items-center">
-              <div class="text-3xl md:text-5xl font-bold mb-7 text-center"
-              :class="[i == 3 ? '-mt-12' : 'mt-5']"
+              <div
+                class="text-3xl md:text-5xl font-bold mb-7 text-center"
+                :class="[i == 3 ? '-mt-12' : 'mt-5']"
               >
                 {{ item.title.toUpperCase() }}
               </div>
               <div
-                class="md:text-[22px] max-w-[723px] leading-7 font-bold text-center"
+                class="md:text-[22px] max-w-[723px] leading-7 font-medium text-center"
               >
                 {{ item.desc }}
               </div>
@@ -105,3 +106,14 @@ const items = ref([
     </div>
   </div>
 </template>
+
+<style scoped>
+.section-header {
+  height: calc(100vh - 100px);
+}
+@media (max-width: 1023px) {
+  .section-header {
+    height: calc(100vh - 70px);
+  }
+}
+</style>

@@ -9,24 +9,26 @@
 
       <sp-prod :changeColor="true" />
 
-      <h2 class="text-white font-bold text-3xl py-10">SPECIAL BRANDS</h2>
+      <h2 class="text-white font-bold text-3xl pt-14 pb-10">SPECIAL BRANDS</h2>
 
       <!-- <div class="bg-white w-full py-5">
         <div class="container flex flex-wrap gap-3 justify-center">
           <img :src="brand" alt="" v-for="(brand, i) in sp_brands" :key="i" />
         </div>
       </div> -->
-      <div
-      class="container grid gap-5 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 py-14"
-    >
-      <div
-        class="bg-white flex justify-center items-center drop-shadow-[0_4px_4px_#0000001A] rounded-lg"
-        v-for="(brand, i) in sp_brands"
-        :key="i"
-      >
-        <img :src="brand" alt="" />
+      <div class="bg-white w-full">
+        <div
+          class="container grid gap-5 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 py-5"
+        >
+          <div
+            class="bg-white flex justify-center items-center rounded-lg"
+            v-for="(brand, i) in sp_brands"
+            :key="i"
+          >
+            <img :src="brand" alt="" />
+          </div>
+        </div>
       </div>
-    </div>
 
       <NuxtLink to="/special-products">
         <button
@@ -229,15 +231,13 @@ const sp_brands = ref(counter.sp_brands);
 // const icons = counter.icons;
 
 const brands = ref([
-  "/images/brands/rbc.png",
-  "/images/brands/skf.png",
-  "/images/brands/makita.jpeg",
-  "/images/brands/bosch.png",
-  "/images/brands/dewalt.png",
-  "/images/brands/sfc.png",
-  "/images/brands/stanley.png",
-  // "/images/brands/kawasaki.jpeg",
-  // "/images/brands/bd.png",
+  "/images/brand-scroll/1.png",
+  "/images/brand-scroll/2.png",
+  "/images/brand-scroll/3.png",
+  "/images/brand-scroll/4.png",
+  "/images/brand-scroll/5.png",
+  "/images/brand-scroll/6.png",
+  "/images/brand-scroll/7.png",
 ]);
 
 const clients = ref([

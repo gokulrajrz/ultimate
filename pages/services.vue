@@ -20,7 +20,7 @@
       <div class="flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/service.jpeg"
+            src="/images/service.png"
             class="rounded-10"
             height="306px"
             cover

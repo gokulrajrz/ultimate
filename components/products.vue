@@ -1,7 +1,13 @@
 <template>
   <div class="mt-6 hidden lg:block">
     <!-- <div class="text-xl font-bold mb-5">OUR PRODUCTS</div> -->
-    <div class="text-primary-color text-[35px] font-bold text-center my-7">
+    <div
+      :class="[
+        route.path == '/'
+          ? 'text-primary-color text-[35px] font-bold text-center my-7'
+          : 'text-xl font-bold mb-5',
+      ]"
+    >
       OUR PRODUCTS
     </div>
     <div class="grid grid-cols-4">
@@ -97,6 +103,8 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, ref } from "vue";
+import { useRoute } from "vue-router";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useAppStore } from "../stores/store";
@@ -105,6 +113,7 @@ export default defineComponent({
   name: "",
 
   setup() {
+    const route = useRoute(); // ✅ Use inside setup()
     const AppStore = useAppStore();
 
     const products = ref(AppStore.services);
@@ -119,15 +128,17 @@ export default defineComponent({
       index.value = swiperInstance.value.activeIndex;
     };
     const slideTo = (index: number) => {
-      swiperInstance.value.slideTo(index, 0);
+      swiperInstance.value?.slideTo(index, 0);
     };
     const swiperNextSlide = () => {
-      swiperInstance.value.slideNext();
+      swiperInstance.value?.slideNext();
     };
     const swiperPrevSlide = () => {
-      swiperInstance.value.slidePrev();
+      swiperInstance.value?.slidePrev();
     };
+
     return {
+      route, // ✅ Now you can access `route` in your template
       swiperPrevSlide,
       swiperNextSlide,
       onSwiper,

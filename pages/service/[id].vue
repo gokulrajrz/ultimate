@@ -30,7 +30,7 @@ useHead({
 <template>
   <div class="container">
     <h1 class="text-primary text-[35px] font-bold text-center mt-14">
-      {{ service?.name }}
+      {{ service?.name.toUpperCase() }}
     </h1>
     <div class="mt-10 flex flex-col lg:flex-row">
       <div class="flex justify-center lg:w-fit">
@@ -41,7 +41,7 @@ useHead({
 
       <div class="flex w-100">
         <div class="mt-[28px] lg:mt-0 flex flex-col px-5 lg:ml-10 w-100">
-          <div class="pt-[20px] lg:!pt-[0px] text-[#474747]">
+          <div class="pt-[20px] lg:!pt-[0px] text-[#474747] text-justify">
             <p>
               {{ service?.desc }}
             </p>
@@ -61,6 +61,8 @@ useHead({
         </div>
       </div>
     </div>
+
+    <div class="my-7 h-[2px] bg-[#D9D9D9]"></div>
 
     <products class="pb-[40px] mb-6" />
     <div class="lg:hidden mb-12">
