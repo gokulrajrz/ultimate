@@ -23,7 +23,7 @@ const items = ref([
   {
     title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
     desc: "Industrial and oil-field spare parts refer to components, equipment, and tools that are essential for the smooth operation and maintenance of industrial machinery and oil-field equipment",
-    img: ["/images/banner/banner.jpeg", "/images/banner/bm-1.jpeg"],
+    img: ["/images/banner/banner.webp", "/images/banner/bm-1.jpeg"],
     link: "/service/Industrial&Oil-Field-Spare-Parts",
   },
   {
