@@ -22,7 +22,7 @@ const swiperPrevSlide = () => {
 const items = ref([
   {
     title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
-    desc: "Industrial and oil-field spare parts refer to components, equipment, and tools that are essential for the smooth operation and maintenance of industrial machinery and oil-field equipment",
+    desc: "Essential Components for Reliable Machinery, Maintenance & Operations",
     img: ["/images/banner/banner.webp", "/images/banner/bm-1.jpeg"],
     link: "/service/Industrial&Oil-Field-Spare-Parts",
   },
@@ -54,7 +54,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col relative section-header">
+  <div class="flex relative section-header">
     <Swiper
       @swiper="onSwiper"
       :slides-per-view="1"
@@ -94,15 +94,23 @@ onMounted(() => {
               :class="[i == 3 ? '-mt-3' : 'mt-5']"
               :to="item.link"
             >
-              <v-btn>Details</v-btn>
+              <v-btn class="hover:bg-primary-color hover:text-[#ffffff]"
+                >Details</v-btn
+              >
             </NuxtLink>
           </div>
         </div>
       </SwiperSlide>
     </Swiper>
-    <div class="hidden lg:flex justify-between z-[1] opacity-70 my-auto">
+    <!-- <div class="hidden lg:flex justify-between z-[1] opacity-70 my-auto">
       <v-btn icon="mdi-chevron-left" @click="swiperPrevSlide" class="ml-15" />
       <v-btn icon="mdi-chevron-right" @click="swiperNextSlide" class="mr-15" />
+    </div> -->
+    <div class="hidden lg:block ml-15 z-[1] my-auto">
+      <v-btn icon="mdi-chevron-left" @click="swiperPrevSlide" class="" />
+    </div>
+    <div class="hidden lg:block mr-15 z-[1] my-auto ml-auto">
+      <v-btn icon="mdi-chevron-right" @click="swiperNextSlide" class="" />
     </div>
   </div>
 </template>

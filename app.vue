@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <v-app class="bg-backgroundGrey relative">
+    <v-app class="bg-white relative">
       <navbar />
       <div class="h-[70px] lg:hidden"></div>
       <NuxtPage />
