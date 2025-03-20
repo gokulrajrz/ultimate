@@ -8,12 +8,13 @@
   >
     <v-carousel-item v-for="(review, i) in reviews" :key="i">
       <div class="h-full flex flex-col items-center justify-center">
-        <div class=" bg-white rounded-[70px] p-2">
+        <div class="bg-white rounded-[70px] p-2">
           <v-avatar :image="review.img" size="90"></v-avatar>
         </div>
         <div class="text-[#FFDE00] mt-5 text-center">
-          {{ review.name
-          }} <span class="text-white" v-if="review.name">-</span> <span class="text-white"> {{ review.company }}</span>
+          {{ review.name }}
+          <span class="text-white" v-if="review.name"> - </span>
+          <span class="text-white"> {{ review.company }}</span>
         </div>
         <div class="text-white mt-5 text-center max-w-[800px]">
           {{ review.desc }}
@@ -53,6 +54,12 @@ const reviews = ref([
     name: "Hari Raj",
     company: "Enova",
     desc: "The team at Ultimate Metal Equipment and Tools is highly professional. Their customer support and product knowledge have been a great asset to us.",
+  },
+  {
+    img: "/images/testimonials/Santosh.jpeg",
+    name: "Mr. Santosh Ratnappa",
+    company: "Emaar Facilities Management",
+    desc: "We have searching building material spares and power tools from ultimate metal equipments for over years and their quality never disappointed us. The durability of their equipments are matched.",
   },
 ]);
 </script>
