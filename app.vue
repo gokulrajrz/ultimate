@@ -7,7 +7,7 @@
 
       <!-- Get a Quote Button -->
       <div
-        class="fixed text-white right-5 bottom-5 rounded-[30px] border-2 border-[#ffffff] z-[5] shadow-[0px_0px_24px_4px_#1a202c80]"
+        class="fixed text-white right-5 bottom-5 rounded-[30px] border-[1px] border-[#ffffff] z-[5] shadow-[6px_6px_24px_4px_#1a202c99]"
       >
         <button
           @click="isModalOpen = true"
