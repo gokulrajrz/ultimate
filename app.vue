@@ -7,7 +7,7 @@
 
       <!-- Get a Quote Button -->
       <div
-        class="fixed text-white right-5 bottom-5 rounded-[30px] border-2 border-[#ffffff] z-[5] shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]"
+        class="fixed text-white right-5 bottom-5 rounded-[30px] border-2 border-[#ffffff] z-[5] shadow-[0px_0px_24px_4px_#1a202c80]"
       >
         <button
           @click="isModalOpen = true"
@@ -193,10 +193,16 @@ const submitForm = async () => {
     isSubmitted.value = false; // Reset form status
     form.value = { name: "", email: "", phone: "", description: "" }; // Clear form
   } catch (err) {
-    // Handle validation errors
-    err.inner.forEach((error: any) => {
-      validationErrors.value[error.path] = error.message;
-    });
+    if (err instanceof yup.ValidationError) {
+      err.inner.forEach((error) => {
+        // Ensure that error.path is a valid key in validationErrors
+        if (error.path && error.path in validationErrors.value) {
+          validationErrors.value[
+            error.path as keyof typeof validationErrors.value
+          ] = error.message;
+        }
+      });
+    }
   }
 };
 </script>
