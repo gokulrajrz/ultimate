@@ -2,132 +2,54 @@
   <NuxtLayout>
     <v-app class="bg-white relative">
       <navbar />
-      <div class="h-[70px] lg:hidden"></div>
       <NuxtPage />
 
-      <!-- Get a Quote Button -->
-      <div
-        class="fixed text-white right-5 bottom-5 rounded-[30px] border-[1px] border-[#ffffff] z-[5] shadow-[6px_6px_24px_4px_#1a202c99]"
-      >
+      <!-- Floating "Get a Quote" Button -->
+      <div class="fixed z-[15] right-5 bottom-5">
         <button
           @click="isModalOpen = true"
-          class="bg-primary-color px-5 py-3 rounded-[30px]"
+          class="bg-primary-color px-5 py-3 text-white rounded-[30px] border-[1px] border-[#ffffff] z-[15] shadow-[6px_6px_24px_4px_#1a202c99]"
         >
           Get a Quote
         </button>
       </div>
 
       <!-- Quote Form Modal -->
-      <div
-        v-if="isModalOpen"
-        class="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-        @click.self="isModalOpen = false"
-      >
-        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
-          <!-- Close Button -->
-          <button
-            @click="isModalOpen = false"
-            class="absolute top-3 right-3 text-gray-500 hover:text-red-500"
-          >
-            ✕
-          </button>
+      <v-dialog v-model="isModalOpen" max-width="450">
+        <v-card>
+          <v-card-title class="text-lg font-bold text-center">
+            Get a Quote
+          </v-card-title>
+          <v-card-text>
+            <form @submit.prevent="submitForm">
+              <v-text-field v-model="form.name" label="Name" required></v-text-field>
+              <v-text-field v-model="form.email" label="Email" type="email" required></v-text-field>
+              <v-text-field v-model="form.phone" label="Phone" required></v-text-field>
+              <v-textarea v-model="form.description" label="Description" required></v-textarea>
+              
+              <div class="flex justify-end mt-4">
+                <v-btn @click="isModalOpen = false">Cancel</v-btn>
+                <v-spacer />
+                <v-btn color="primary" type="submit" :disabled="isSubmitting">
+                  {{ isSubmitting ? "Submitting..." : "Submit" }}
+                </v-btn>
+              </div>
+            </form>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
 
-          <h2 class="text-xl font-bold mb-4 text-center">Get a Quote</h2>
-
-          <form @submit.prevent="submitForm">
-            <div class="mb-3">
-              <label class="block text-gray-700 font-medium"
-                >Name <span class="text-red-500">*</span></label
-              >
-              <input
-                v-model="form.name"
-                type="text"
-                class="w-full p-2 border rounded"
-                placeholder="Enter your name"
-                required
-              />
-              <p
-                v-if="isSubmitted && validationErrors.name"
-                class="text-red-500 text-sm"
-              >
-                {{ validationErrors.name }}
-              </p>
-            </div>
-
-            <div class="mb-3">
-              <label class="block text-gray-700 font-medium"
-                >Email <span class="text-red-500">*</span></label
-              >
-              <input
-                v-model="form.email"
-                type="email"
-                class="w-full p-2 border rounded"
-                placeholder="Enter your email"
-                required
-              />
-              <p
-                v-if="isSubmitted && validationErrors.email"
-                class="text-red-500 text-sm"
-              >
-                {{ validationErrors.email }}
-              </p>
-            </div>
-
-            <div class="mb-3">
-              <label class="block text-gray-700 font-medium"
-                >Phone <span class="text-red-500">*</span></label
-              >
-              <input
-                v-model="form.phone"
-                type="tel"
-                class="w-full p-2 border rounded"
-                placeholder="Enter your phone number"
-                required
-              />
-              <p
-                v-if="isSubmitted && validationErrors.phone"
-                class="text-red-500 text-sm"
-              >
-                {{ validationErrors.phone }}
-              </p>
-            </div>
-
-            <div class="mb-3">
-              <label class="block text-gray-700 font-medium"
-                >Description <span class="text-red-500">*</span></label
-              >
-              <textarea
-                v-model="form.description"
-                class="w-full p-2 border rounded"
-                placeholder="Describe your requirements"
-                required
-              ></textarea>
-              <p
-                v-if="isSubmitted && validationErrors.description"
-                class="text-red-500 text-sm"
-              >
-                {{ validationErrors.description }}
-              </p>
-            </div>
-
-            <div class="flex justify-end mt-4">
-              <button
-                type="button"
-                @click="isModalOpen = false"
-                class="px-4 py-2 bg-gray-400 text-white rounded mr-2"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                class="px-4 py-2 bg-primary-color text-white rounded"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <!-- Success/Error Popup Modal -->
+      <v-dialog v-model="isPopupOpen" max-width="400">
+        <v-card>
+          <v-card-title class="text-center text-lg font-bold">
+            {{ popupMessage }}
+          </v-card-title>
+          <v-card-actions class="justify-center">
+            <v-btn color="primary" @click="isPopupOpen = false">OK</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
 
       <app-footer />
     </v-app>
@@ -136,16 +58,14 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useRoute } from "vue-router";
-import { computed } from "vue";
-import * as yup from "yup";
+import emailjs from "@emailjs/browser";
 
-// Get the current route
-const route = useRoute();
+// Reactive state
 const isModalOpen = ref(false);
-const isSubmitted = ref(false);
+const isPopupOpen = ref(false);
+const popupMessage = ref("");
+const isSubmitting = ref(false);
 
-// Form data
 const form = ref({
   name: "",
   email: "",
@@ -153,56 +73,33 @@ const form = ref({
   description: "",
 });
 
-// Error tracking
-const validationErrors = ref({
-  name: "",
-  email: "",
-  phone: "",
-  description: "",
-});
+// Replace with your EmailJS credentials
+const SERVICE_ID = "service_xvuq60g";
+const TEMPLATE_ID = "template_4jw74w7";
+const PUBLIC_KEY = "pSXDUutcjxTTiLho8";
 
-// Validation schema
-const schema = yup.object({
-  name: yup.string().required("Name is required"),
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  phone: yup.string().required("Phone is required"),
-  description: yup.string().required("Description is required"),
-});
-
-// Compute whether to show the header carousel
-const showHeaderCarousel = computed(() => route.path !== "/contact");
-
-useHead({
-  title: "Ultimate Metal Equipments & Tools Trading Company",
-});
-
-// Form submission
 const submitForm = async () => {
-  isSubmitted.value = true;
-  validationErrors.value = { name: "", email: "", phone: "", description: "" }; // Reset errors
+  isSubmitting.value = true;
 
   try {
-    await schema.validate(form.value, { abortEarly: false }); // Validate all fields
+    const templateParams = {
+      name: form.value.name,
+      email: form.value.email,
+      phone: form.value.phone,
+      description: form.value.description,
+    };
 
-    // If validation passes, submit form
-    alert("Quote request submitted successfully!");
+    // Send email via EmailJS
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+
+    popupMessage.value = "Thank you! Your request has been sent.";
+    form.value = { name: "", email: "", phone: "", description: "" };
+  } catch (error) {
+    popupMessage.value = "Failed to submit. Please try again.";
+  } finally {
+    isSubmitting.value = false;
+    isPopupOpen.value = true;
     isModalOpen.value = false;
-    isSubmitted.value = false; // Reset form status
-    form.value = { name: "", email: "", phone: "", description: "" }; // Clear form
-  } catch (err) {
-    if (err instanceof yup.ValidationError) {
-      err.inner.forEach((error) => {
-        // Ensure that error.path is a valid key in validationErrors
-        if (error.path && error.path in validationErrors.value) {
-          validationErrors.value[
-            error.path as keyof typeof validationErrors.value
-          ] = error.message;
-        }
-      });
-    }
   }
 };
 </script>

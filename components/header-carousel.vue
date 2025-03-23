@@ -6,9 +6,14 @@ import "swiper/css/navigation";
 import "swiper/css/effect-creative";
 
 const swiperInstance = ref<any>(null);
+const currentSlide = ref(0);
 
 const onSwiper = (swiper: any) => {
   swiperInstance.value = swiper;
+};
+
+const onSlideChange = (swiper: any) => {
+  currentSlide.value = swiper.realIndex; // Get the active slide index
 };
 
 const swiperNextSlide = () => {
@@ -23,7 +28,7 @@ const items = ref([
   {
     title: "INDUSTRIAL & OIL-FIELD SPARE PARTS",
     desc: "Essential Components for Reliable Machinery, Maintenance & Operations",
-    img: ["/images/banner/banner.webp", "/images/banner/bm-1.jpeg"],
+    img: ["/images/banner/banner.webp", "/images/banner/bm-1.webp"],
     link: "/service/Industrial&Oil-Field-Spare-Parts",
   },
   {
@@ -57,15 +62,16 @@ onMounted(() => {
   <div class="flex relative section-header">
     <Swiper
       @swiper="onSwiper"
+      @slideChange="onSlideChange"
       :slides-per-view="1"
       :loop="true"
       :effect="'creative'"
-      :autoplay="{ delay: 1000 }"
+      :autoplay="{ delay: 8000 }"
       :creative-effect="{
         prev: { shadow: false, translate: ['-20%', 0, -1] },
         next: { translate: ['100%', 0, 0] },
       }"
-      class="w-100 !absolute"
+      class="w-100 !absolute z-[5]"
     >
       <SwiperSlide v-for="(item, i) in items" :key="i">
         <div class="section-header relative">
@@ -90,8 +96,8 @@ onMounted(() => {
               </div>
             </div>
             <NuxtLink
-              class="w-fit rounded-[50px] lg:rounded-[10px] overflow-hidden"
-              :class="[i == 3 ? '-mt-3' : 'mt-5']"
+              class="w-fit rounded-[50px] lg:rounded-[10px] overflow-hidden mt-5"
+              :class="{ 'filter grayscale': currentSlide !== items.length - 1 }"
               :to="item.link"
             >
               <v-btn class="hover:bg-primary-color hover:text-[#ffffff]"
@@ -102,23 +108,46 @@ onMounted(() => {
         </div>
       </SwiperSlide>
     </Swiper>
-    <!-- <div class="hidden lg:flex justify-between z-[1] opacity-70 my-auto">
-      <v-btn icon="mdi-chevron-left" @click="swiperPrevSlide" class="ml-15" />
-      <v-btn icon="mdi-chevron-right" @click="swiperNextSlide" class="mr-15" />
-    </div> -->
+
     <div class="hidden lg:block ml-15 z-[1] my-auto">
-      <v-btn icon="mdi-chevron-left" @click="swiperPrevSlide" class="" />
+      <v-btn icon="mdi-chevron-left" @click="swiperPrevSlide" />
     </div>
     <div class="hidden lg:block mr-15 z-[1] my-auto ml-auto">
-      <v-btn icon="mdi-chevron-right" @click="swiperNextSlide" class="" />
+      <v-btn icon="mdi-chevron-right" @click="swiperNextSlide" />
+    </div>
+
+    <!-- Bouncing arrow using CSS animation -->
+    <div
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/chevron-down.svg"
+        class="w-8 h-8 "
+        :class="[currentSlide === items.length - 1 ? '' : 'filter invert']"
+      />
     </div>
   </div>
 </template>
 
 <style scoped>
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
 .section-header {
   height: calc(100vh - 100px);
 }
+
 @media (max-width: 1023px) {
   .section-header {
     height: calc(100vh - 70px);
