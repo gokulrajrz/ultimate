@@ -92,7 +92,7 @@ const submitForm = async () => {
     // Send email via EmailJS
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
-    popupMessage.value = "Thank you! Your request has been sent.";
+    popupMessage.value = "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible.";
     form.value = { name: "", email: "", phone: "", description: "" };
   } catch (error) {
     popupMessage.value = "Failed to submit. Please try again.";
