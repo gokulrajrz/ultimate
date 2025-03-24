@@ -119,6 +119,7 @@
 <script lang="ts">
 import { ref, defineComponent } from "vue";
 import { useAppStore } from "../stores/store";
+import emailjs from "@emailjs/browser";
 
 export default defineComponent({
   setup() {
@@ -136,27 +137,31 @@ export default defineComponent({
     const dialogTitle = ref("");
     const dialogMessage = ref("");
 
+    // EmailJS Credentials
+    const SERVICE_ID = "service_xvuq60g";
+    const TEMPLATE_ID = "template_4jw74w7";
+    const PUBLIC_KEY = "pSXDUutcjxTTiLho8";
+
     const submitForm = async () => {
       isSubmitting.value = true;
       showDialog.value = false;
 
       try {
-        const response = await fetch("https://formspree.io/f/maneogep", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form.value),
-        });
+        const templateParams = {
+          name: form.value.name,
+          email: form.value.email,
+          phone: form.value.phone,
+          message: form.value.quote,
+        };
 
-        if (response.ok) {
-          dialogTitle.value = "Success!";
-          dialogMessage.value = "Thank you! Your request has been sent.";
-          form.value = { name: "", email: "", phone: "", quote: "" };
-        } else {
-          throw new Error("Failed to submit. Please try again.");
-        }
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+
+        dialogTitle.value = "Successfully submitted!";
+        dialogMessage.value = "Thanks for your request! We'll get back to you soon. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
+        form.value = { name: "", email: "", phone: "", quote: "" };
       } catch (error: any) {
-        dialogTitle.value = "Error!";
-        dialogMessage.value = error.message;
+        dialogTitle.value = "Failed to submit!";s
+        dialogMessage.value = "Failed to submit. Please try again.";
       } finally {
         isSubmitting.value = false;
         showDialog.value = true;

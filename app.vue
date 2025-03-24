@@ -16,22 +16,57 @@
 
       <!-- Quote Form Modal -->
       <v-dialog v-model="isModalOpen" max-width="450">
-        <v-card>
-          <v-card-title class="text-lg font-bold text-center">
-            Get a Quote
+        <v-card class="p-6 rounded-xl shadow-lg">
+          <v-card-title class="text-xl font-bold text-center text-gray-900">
+            🚀 Get a Quote
           </v-card-title>
+
           <v-card-text>
             <form @submit.prevent="submitForm">
-              <v-text-field v-model="form.name" label="Name" required></v-text-field>
-              <v-text-field v-model="form.email" label="Email" type="email" required></v-text-field>
-              <v-text-field v-model="form.phone" label="Phone" required></v-text-field>
-              <v-textarea v-model="form.description" label="Description" required></v-textarea>
-              
-              <div class="flex justify-end mt-4">
-                <v-btn @click="isModalOpen = false">Cancel</v-btn>
-                <v-spacer />
-                <v-btn color="primary" type="submit" :disabled="isSubmitting">
-                  {{ isSubmitting ? "Submitting..." : "Submit" }}
+              <v-text-field
+                v-model="form.name"
+                label="Full Name"
+                variant="outlined"
+                color="primary"
+                class="mb-4"
+                required
+              ></v-text-field>
+
+              <v-text-field
+                v-model="form.email"
+                label="Email Address"
+                variant="outlined"
+                color="primary"
+                type="email"
+                class="mb-4"
+                required
+              ></v-text-field>
+
+              <v-text-field
+                v-model="form.phone"
+                label="Phone Number"
+                variant="outlined"
+                color="primary"
+                class="mb-4"
+                required
+              ></v-text-field>
+
+              <v-textarea
+                v-model="form.description"
+                label="Describe Your Requirements"
+                variant="outlined"
+                color="primary"
+                rows="3"
+                class="mb-4"
+                required
+              ></v-textarea>
+
+              <div class="flex justify-end gap-3 mt-4">
+                <v-btn variant="text" @click="isModalOpen = false"
+                  >Cancel</v-btn
+                >
+                <v-btn color="primary" type="submit" :loading="isSubmitting">
+                  Submit
                 </v-btn>
               </div>
             </form>
@@ -43,8 +78,9 @@
       <v-dialog v-model="isPopupOpen" max-width="400">
         <v-card>
           <v-card-title class="text-center text-lg font-bold">
-            {{ popupMessage }}
+            {{ dialogTitle }}
           </v-card-title>
+          <v-card-text>{{ popupMessage }}</v-card-text>
           <v-card-actions class="justify-center">
             <v-btn color="primary" @click="isPopupOpen = false">OK</v-btn>
           </v-card-actions>
@@ -65,6 +101,7 @@ const isModalOpen = ref(false);
 const isPopupOpen = ref(false);
 const popupMessage = ref("");
 const isSubmitting = ref(false);
+const dialogTitle = ref("");
 
 const form = ref({
   name: "",
@@ -86,15 +123,18 @@ const submitForm = async () => {
       name: form.value.name,
       email: form.value.email,
       phone: form.value.phone,
-      description: form.value.description,
+      message: form.value.description,
     };
 
     // Send email via EmailJS
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
-    popupMessage.value = "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible.";
+    dialogTitle.value = "Quote submitted Successfully!";
+    popupMessage.value =
+      "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible.";
     form.value = { name: "", email: "", phone: "", description: "" };
   } catch (error) {
+    dialogTitle.value = "Failed to submit!";
     popupMessage.value = "Failed to submit. Please try again.";
   } finally {
     isSubmitting.value = false;
