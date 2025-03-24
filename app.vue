@@ -2,7 +2,7 @@
   <NuxtLayout>
     <v-app class="bg-white relative">
       <navbar />
-      <NuxtPage class="mt-[70px] lg:mt-0"/>
+      <NuxtPage class="mt-[70px] lg:mt-0" />
 
       <!-- Floating "Get a Quote" Button -->
       <div class="fixed z-[15] right-5 bottom-5">
@@ -80,7 +80,13 @@
           <v-card-title class="text-center text-lg font-bold">
             {{ dialogTitle }}
           </v-card-title>
-          <v-card-text class="text-center">{{ popupMessage }}</v-card-text>
+          <v-card-text class="text-center">
+            <p>{{ popupMessage }}</p>
+            <p class="mt-4 text-sm text-gray-500">
+              Need urgent help? Contact us at +97125558890 or
+              sales@ultimate-equipments.com
+            </p></v-card-text
+          >
           <v-card-actions class="justify-center">
             <v-btn color="primary" @click="isPopupOpen = false">OK</v-btn>
           </v-card-actions>
@@ -99,9 +105,9 @@ import emailjs from "@emailjs/browser";
 // Reactive state
 const isModalOpen = ref(false);
 const isPopupOpen = ref(false);
-const popupMessage = ref("");
+const popupMessage = ref("Default message");
 const isSubmitting = ref(false);
-const dialogTitle = ref("");
+const dialogTitle = ref("Default title");
 
 const form = ref({
   name: "",
@@ -131,7 +137,7 @@ const submitForm = async () => {
 
     dialogTitle.value = "Quote submitted Successfully!";
     popupMessage.value =
-      "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
+      "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible.";
     form.value = { name: "", email: "", phone: "", description: "" };
   } catch (error) {
     dialogTitle.value = "Failed to submit!";

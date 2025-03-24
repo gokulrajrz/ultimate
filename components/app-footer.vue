@@ -106,8 +106,12 @@
           {{ dialogTitle }}
         </v-card-title>
         <v-card-text class="text-center">
-          {{ dialogMessage }}
-        </v-card-text>
+            <p>{{ dialogMessage }}</p>
+            <p class="mt-4 text-sm text-gray-500">
+              Need urgent help? Contact us at +97125558890 or
+              sales@ultimate-equipments.com
+            </p></v-card-text
+          >
         <v-card-actions class="justify-center">
           <v-btn color="primary" @click="showDialog = false">OK</v-btn>
         </v-card-actions>
@@ -157,7 +161,7 @@ export default defineComponent({
         await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
 
         dialogTitle.value = "Successfully submitted!";
-        dialogMessage.value = "Thanks for your request! We'll get back to you soon. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
+        dialogMessage.value = "Thanks for your request! We'll get back to you soon.";
         form.value = { name: "", email: "", phone: "", quote: "" };
       } catch (error: any) {
         dialogTitle.value = "Failed to submit!";

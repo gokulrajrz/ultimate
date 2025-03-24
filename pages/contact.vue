@@ -106,8 +106,12 @@
       <v-card  class="py-5">
         <v-card-title class="text-center">{{ dialogTitle }}</v-card-title>
         <v-card-text class="text-center">
-          {{ dialogMessage }}
-        </v-card-text>
+            <p>{{ dialogMessage }}</p>
+            <p class="mt-4 text-sm text-gray-500">
+              Need urgent help? Contact us at +97125558890 or
+              sales@ultimate-equipments.com
+            </p></v-card-text
+          >
         <v-card-actions>
           <v-btn color="primary" block @click="dialog = false">OK</v-btn>
         </v-card-actions>
@@ -186,7 +190,7 @@ const sendEmail = async () => {
 
     dialogTitle.value = "Successfully submitted";
     dialogMessage.value =
-      "Thanks for contacting us. We will get back to you soon. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
+      "Thanks for contacting us. We will get back to you soon.";
     form.value = { name: "", email: "", phone: "", message: "" };
   } catch (error) {
     console.error("EmailJS Error:", error);
