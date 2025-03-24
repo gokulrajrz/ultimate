@@ -2,7 +2,7 @@
   <NuxtLayout>
     <v-app class="bg-white relative">
       <navbar />
-      <NuxtPage />
+      <NuxtPage class="mt-[70px] lg:mt-0"/>
 
       <!-- Floating "Get a Quote" Button -->
       <div class="fixed z-[15] right-5 bottom-5">
@@ -16,7 +16,7 @@
 
       <!-- Quote Form Modal -->
       <v-dialog v-model="isModalOpen" max-width="450">
-        <v-card class="p-6 rounded-xl shadow-lg">
+        <v-card class="p-6 rounded-xl shadow-lg py-5">
           <v-card-title class="text-xl font-bold text-center text-gray-900">
             🚀 Get a Quote
           </v-card-title>
@@ -76,11 +76,11 @@
 
       <!-- Success/Error Popup Modal -->
       <v-dialog v-model="isPopupOpen" max-width="400">
-        <v-card>
+        <v-card class="py-5">
           <v-card-title class="text-center text-lg font-bold">
             {{ dialogTitle }}
           </v-card-title>
-          <v-card-text>{{ popupMessage }}</v-card-text>
+          <v-card-text class="text-center">{{ popupMessage }}</v-card-text>
           <v-card-actions class="justify-center">
             <v-btn color="primary" @click="isPopupOpen = false">OK</v-btn>
           </v-card-actions>
@@ -131,7 +131,7 @@ const submitForm = async () => {
 
     dialogTitle.value = "Quote submitted Successfully!";
     popupMessage.value =
-      "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible.";
+      "Thank you for contacting us. We are reviewing your request and will get back to you as soon as possible. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
     form.value = { name: "", email: "", phone: "", description: "" };
   } catch (error) {
     dialogTitle.value = "Failed to submit!";

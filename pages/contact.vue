@@ -58,7 +58,7 @@
         >
           WRITE TO US
         </div>
-        <form @submit.prevent="sendEmail">
+        <form @submit.prevent="sendEmail" class="mt-5">
           <v-text-field
             v-model="form.name"
             placeholder="Name"
@@ -105,7 +105,7 @@
     <v-dialog v-model="dialog" max-width="400">
       <v-card  class="py-5">
         <v-card-title class="text-center">{{ dialogTitle }}</v-card-title>
-        <v-card-text>
+        <v-card-text class="text-center">
           {{ dialogMessage }}
         </v-card-text>
         <v-card-actions>
@@ -186,7 +186,7 @@ const sendEmail = async () => {
 
     dialogTitle.value = "Successfully submitted";
     dialogMessage.value =
-      "Thanks for contacting us. We will get back to you soon.";
+      "Thanks for contacting us. We will get back to you soon. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
     form.value = { name: "", email: "", phone: "", message: "" };
   } catch (error) {
     console.error("EmailJS Error:", error);

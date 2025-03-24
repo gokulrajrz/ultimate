@@ -101,7 +101,7 @@
 
     <!-- Success/Error Popup Modal -->
     <v-dialog v-model="showDialog" max-width="400">
-      <v-card>
+      <v-card class="py-5">
         <v-card-title class="text-center font-bold text-lg">
           {{ dialogTitle }}
         </v-card-title>
@@ -160,7 +160,7 @@ export default defineComponent({
         dialogMessage.value = "Thanks for your request! We'll get back to you soon. Need urgent help? Contact us at +97125558890 or sales@ultimate-equipments.com";
         form.value = { name: "", email: "", phone: "", quote: "" };
       } catch (error: any) {
-        dialogTitle.value = "Failed to submit!";s
+        dialogTitle.value = "Failed to submit!";
         dialogMessage.value = "Failed to submit. Please try again.";
       } finally {
         isSubmitting.value = false;
