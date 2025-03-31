@@ -53,7 +53,7 @@
 
               <v-textarea
                 v-model="form.description"
-                label="Describe Your Requirements"
+                label="Request for a Quote"
                 variant="outlined"
                 color="primary"
                 rows="3"
