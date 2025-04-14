@@ -124,6 +124,7 @@ onMounted(() => {
         src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/chevron-down.svg"
         class="w-8 h-8 "
         :class="[currentSlide === items.length - 1 ? '' : 'filter invert']"
+        alt="Scroll Down"
       />
     </div>
   </div>

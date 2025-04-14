@@ -99,6 +99,11 @@
 </template>
 
 <script setup lang="ts">
+
+useHead({
+  title: 'Ultimate Equipments',
+})
+
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
 
