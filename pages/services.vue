@@ -23,6 +23,7 @@
             src="/images/service.png"
             class="rounded-10"
             height="306px"
+            alt="Services image"
             cover
           />
         </div>

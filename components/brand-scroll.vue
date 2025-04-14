@@ -6,7 +6,7 @@
         :key="i"
         class="flex items-center justify-center"
       >
-        <img :src="img" width="150px" />
+        <img :src="img" width="150px" alt="Brand image" />
       </div>
     </div>
   </div>

@@ -92,7 +92,7 @@ export default defineComponent({
       >
         <SwiperSlide v-for="(icon, i) in icons" :key="i" class="h-[60px] px-2">
           <div class="h-[60px] flex items-center">
-            <v-img :src="icon"></v-img>
+            <v-img :src="icon" alt="client logo"></v-img>
           </div>
         </SwiperSlide>
       </Swiper>

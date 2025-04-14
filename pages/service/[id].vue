@@ -35,7 +35,7 @@ useHead({
     <div class="mt-10 flex flex-col lg:flex-row">
       <div class="flex justify-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
-          <v-img :src="service?.img" class="rounded-10" height="306px" cover />
+          <v-img :src="service?.img" class="rounded-10" height="306px" cover :alt="service?.name"/>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ useHead({
               :key="i"
             >
               <div>
-                <v-img src="/images/point.png" height="34" width="34" />
+                <v-img src="/images/point.png" height="34" width="34" alt="point icon"/>
               </div>
               <div class="ml-5">{{ point }}</div>
             </div>

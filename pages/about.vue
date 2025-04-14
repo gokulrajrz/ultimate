@@ -8,6 +8,7 @@
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
             src="/images/about-2-1.jpeg"
+            alt="Industries"
             class="rounded-10"
             height="306px"
             cover
@@ -45,6 +46,7 @@
           <v-img
             src="/images/about-3-1.jpeg"
             class="rounded-10"
+            alt="Industries"
             height="306px"
             cover
           />
@@ -79,6 +81,7 @@
             src="/images/about-3-1.jpeg"
             class="rounded-10"
             height="306px"
+            alt="Industries"
             cover
           />
         </div>
@@ -95,7 +98,12 @@
       </div>
       <div class="flex justify-center items-center lg:w-fit my-4">
         <div class="w-[373px] lg:max-w-[373px]">
-          <v-img src="/images/about-4.png" class="rounded-10" height="306px" />
+          <v-img
+            src="/images/about-4.png"
+            class="rounded-10"
+            height="306px"
+            alt="why us icon"
+          />
         </div>
       </div>
 
@@ -119,7 +127,12 @@
               :key="i"
             >
               <div>
-                <v-img src="/images/point.png" height="34" width="34" />
+                <v-img
+                  src="/images/point.png"
+                  height="34"
+                  width="34"
+                  alt="why us icon"
+                />
               </div>
               <div class="text-[#474747] ml-5 w-fit">{{ point.title }}</div>
             </div>

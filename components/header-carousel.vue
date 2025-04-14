@@ -76,8 +76,8 @@ onMounted(() => {
       <SwiperSlide v-for="(item, i) in items" :key="i">
         <div class="section-header relative">
           <div class="w-100 h-100 absolute">
-            <img class="lg:hidden h-100 w-100" :src="item.img[1]" />
-            <img class="hidden lg:block h-100 w-100" :src="item.img[0]" />
+            <img class="lg:hidden h-100 w-100" :src="item.img[1]" :alt="item.title" />
+            <img class="hidden lg:block h-100 w-100" :src="item.img[0]" :alt="item.title"/>
           </div>
           <div
             class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]"

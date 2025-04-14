@@ -25,7 +25,7 @@
             v-for="(brand, i) in sp_brands"
             :key="i"
           >
-            <img :src="brand" alt="" />
+            <img :src="brand" alt="special brand logo" />
           </div>
         </div>
       </div>
@@ -67,6 +67,7 @@
             <v-img
               src="/images/abt-home-1.webp"
               class="rounded-10"
+              alt="Industries"
               height="306px"
               cover
             />
@@ -123,7 +124,7 @@
       <div class="hidden lg:flex items-center">
         <img
           src="/images/abt-home-1.webp"
-          alt=""
+          alt="Industries"
           class="h-[306px] min-w-[373px] object-cover about-home- rounded-[10px]"
         />
         <div class="ml-10">

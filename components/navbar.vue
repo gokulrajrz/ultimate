@@ -64,7 +64,11 @@ const onClickOutside = () => {
       <div class="flex items-center h-full">
         <NuxtLink to="/">
           <div class="">
-            <v-img src="/images/ultimate_logo.png" width="133" />
+            <v-img
+              src="/images/ultimate_logo.png"
+              width="133"
+              alt="Ultimate Equipments Logo"
+            />
           </div>
         </NuxtLink>
 
@@ -106,7 +110,11 @@ const onClickOutside = () => {
       <div class="flex items-center h-full px-[60px]">
         <NuxtLink to="/">
           <div class="">
-            <v-img src="/images/ultimate_logo.png" width="200px" />
+            <v-img
+              src="/images/ultimate_logo.png"
+              width="200px"
+              alt="Ultimate Equipments Logo"
+            />
           </div>
         </NuxtLink>
 
