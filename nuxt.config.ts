@@ -34,6 +34,9 @@ export default defineNuxtConfig({
   googleFonts: {
     display: "swap",
     preload: true,
+    preconnect: true,
+    download: true,
+    inject: true,
     families: {
       "Sofia Sans": true,
       Roboto: true,
