@@ -19,6 +19,15 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@pinia/nuxt",
   ],
+
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
+
   pinia: {
     storesDirs: ["./stores/**"],
   },
