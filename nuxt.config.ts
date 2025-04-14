@@ -32,6 +32,8 @@ export default defineNuxtConfig({
     componentPrefix: "i",
   },
   googleFonts: {
+    display: "swap",
+    preload: true,
     families: {
       "Sofia Sans": true,
       Roboto: true,

@@ -65,7 +65,7 @@
         <div class="flex justify-center items-center lg:w-fit">
           <div class="w-[373px] lg:max-w-[373px]">
             <v-img
-              src="/images/abt-home-1.jpeg"
+              src="/images/abt-home-1.webp"
               class="rounded-10"
               height="306px"
               cover
@@ -122,7 +122,7 @@
       </div>
       <div class="hidden lg:flex items-center">
         <img
-          src="/images/abt-home-1.jpeg"
+          src="/images/abt-home-1.webp"
           alt=""
           class="h-[306px] min-w-[373px] object-cover about-home- rounded-[10px]"
         />
