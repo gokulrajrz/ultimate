@@ -74,8 +74,7 @@
                     class="mt-5 rounded-btn px-3 py-[10px] text-none"
                     variant="flat"
                     color="primary"
-                    >View More<i-right-2 class="ml-2"
-                  /></v-btn>
+                    >View More</v-btn>
                 </NuxtLink>
               </div>
             </div>
