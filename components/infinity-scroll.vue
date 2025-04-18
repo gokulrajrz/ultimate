@@ -1,24 +1,16 @@
 <template>
   <div class="infinity-scroll-container w-full overflow-hidden">
     <div class="scroll-track">
-      <!-- First set of logos -->
-      <div class="scroll-content">
-        <div
-          v-for="(img, i) in imgs"
-          :key="i"
-          class="logo-tile"
-          :style="{ backgroundImage: `url(${img})` }"
-        />
-      </div>
-      <!-- Repeated for seamless loop -->
-      <div class="scroll-content">
-        <div
-          v-for="(img, i) in imgs"
-          :key="'clone-' + i"
-          class="logo-tile"
-          :style="{ backgroundImage: `url(${img})` }"
-        />
-      </div>
+      <template v-for="j in 2" :key="j">
+        <div class="scroll-content">
+          <div
+            v-for="(img, i) in imgs"
+            :key="`${j}-${i}`"
+            class="logo-tile"
+            :style="{ backgroundImage: `url(${img})` }"
+          />
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -27,8 +19,6 @@
 const props = defineProps<{
   imgs: string[];
 }>();
-
-const imgs = props.imgs;
 </script>
 
 <style scoped>
@@ -57,7 +47,7 @@ const imgs = props.imgs;
 
 .scroll-content {
   display: flex;
-  gap: 1.25rem; /* gap-5 */
+  gap: 1.25rem; /* Tailwind's gap-5 */
 }
 
 .logo-tile {
@@ -68,6 +58,8 @@ const imgs = props.imgs;
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
+
+/* Infinite scroll effect */
 @keyframes scroll {
   from {
     transform: translateX(0%);
