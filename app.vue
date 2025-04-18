@@ -1,6 +1,14 @@
 <template>
   <NuxtLayout>
-    <v-app class="bg-white relative">
+    <!-- Loader Screen -->
+    <div
+      v-if="isPageLoading"
+      class="fixed inset-0 bg-black bg-opacity-50 z-[30] flex items-center justify-center"
+    >
+      <div class="loader"></div>
+    </div>
+
+    <v-app class="bg-white relative" v-show="!isPageLoading">
       <navbar />
       <NuxtPage class="mt-[70px] lg:mt-0" />
 
@@ -99,12 +107,11 @@
 </template>
 
 <script setup lang="ts">
-
 useHead({
   title: 'Ultimate Equipments',
 })
 
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import emailjs from "@emailjs/browser";
 
 // Reactive state
@@ -112,6 +119,7 @@ const isModalOpen = ref(false);
 const isPopupOpen = ref(false);
 const popupMessage = ref("Default message");
 const isSubmitting = ref(false);
+const isPageLoading = ref(true); // New state for page loading
 const dialogTitle = ref("Default title");
 
 const form = ref({
@@ -153,4 +161,38 @@ const submitForm = async () => {
     isModalOpen.value = false;
   }
 };
+
+// Simulate page loading
+onMounted(() => {
+  if (document.readyState === "complete") {
+    // If the page is already loaded
+    isPageLoading.value = false;
+  } else {
+    // Wait for the page to load
+    window.onload = () => {
+      isPageLoading.value = false;
+    };
+  }
+});
 </script>
+
+<style>
+/* Loader styles */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
