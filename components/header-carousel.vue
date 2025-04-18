@@ -76,8 +76,28 @@ onMounted(() => {
       <SwiperSlide v-for="(item, i) in items" :key="i">
         <div class="section-header relative">
           <div class="w-100 h-100 absolute">
-            <img class="lg:hidden h-100 w-100" :src="item.img[1]" :alt="item.title" />
-            <img class="hidden lg:block h-100 w-100" :src="item.img[0]" :alt="item.title"/>
+            <!-- <img class="lg:hidden h-100 w-100" :src="item.img[1]" :alt="item.title" />
+            <img class="hidden lg:block h-100 w-100" :src="item.img[0]" :alt="item.title"/> -->
+            <NuxtImg
+              :src="item.img[1]"
+              :alt="item.title"
+              class="lg:hidden h-100 w-100"
+              width="768"
+              height="100%"
+              format="webp"
+              priority
+            />
+
+            <!-- Desktop Image (shown on ≥1024px) -->
+            <NuxtImg
+              :src="item.img[0]"
+              :alt="item.title"
+              class="hidden lg:block h-100 w-100"
+              width="1920"
+              height="800"
+              format="webp"
+              priority
+            />
           </div>
           <div
             class="relative h-100 px-4 flex flex-col items-center justify-center z-[1]"
@@ -122,7 +142,7 @@ onMounted(() => {
     >
       <img
         src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/chevron-down.svg"
-        class="w-8 h-8 "
+        class="w-8 h-8"
         :class="[currentSlide === items.length - 1 ? '' : 'filter invert']"
         alt="Scroll Down"
       />
