@@ -20,7 +20,7 @@ export const useAppStore = defineStore("app", {
           "O-Rings",
           "Oil  Gaskets",
         ],
-        img: "/services/1.jpeg",
+        img: "/services/1.webp",
       },
       {
         id: "Fasteners",
@@ -40,7 +40,7 @@ export const useAppStore = defineStore("app", {
           "Self-Tapping Screws",
           "U Bolts/ J Bolts/ L Bolts",
         ],
-        img: "/services/2.jpeg",
+        img: "/services/2.webp",
       },
       {
         id: "Power-Tools&Pneumatic-Tools",
@@ -61,7 +61,7 @@ export const useAppStore = defineStore("app", {
           "Angle Grinder",
           "Pneumatic Hammer",
         ],
-        img: "/services/3.jpeg",
+        img: "/services/3.webp",
       },
       {
         id: "Engineering&Hand-Tools",
@@ -83,7 +83,7 @@ export const useAppStore = defineStore("app", {
           "Grinding Discs",
           "Monkey Pliers",
         ],
-        img: "/services/4.jpeg",
+        img: "/services/4.webp",
       },
       {
         id: "5",
@@ -103,7 +103,7 @@ export const useAppStore = defineStore("app", {
           "Temperature & Humidity Testing Machine",
           "Welding Gares",
         ],
-        img: "/services/5.jpeg",
+        img: "/services/5.webp",
       },
       {
         id: "Safety-Products",
@@ -126,7 +126,7 @@ export const useAppStore = defineStore("app", {
           "Safety Harness",
           "Safety Sinages",
         ],
-        img: "/services/6.jpeg",
+        img: "/services/6.webp",
       },
       {
         id: "Lifting-Equipment",
@@ -144,7 +144,7 @@ export const useAppStore = defineStore("app", {
           "Wire Ropes",
           "Webbing Slings",
         ],
-        img: "/services/7.jpeg",
+        img: "/services/7.webp",
       },
       {
         id: "Welding-Equipment-Cutting&Welding-Consumable",
@@ -169,7 +169,7 @@ export const useAppStore = defineStore("app", {
           "Regulators",
           "Others (Including Gases)",
         ],
-        img: "/services/8.jpeg",
+        img: "/services/8.webp",
       },
       {
         id: "Electrical&Plumbing-Materials",
@@ -192,7 +192,7 @@ export const useAppStore = defineStore("app", {
           "Electrical Motors",
           "Blowers and Fans",
         ],
-        img: "/services/9.jpeg",
+        img: "/services/9.webp",
       },
     ],
     sp_brands: [

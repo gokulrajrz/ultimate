@@ -3,7 +3,7 @@
     <header-carousel />
     <banner />
     <div
-      class="bg-[url('/images/bg-m2.png')] lg:bg-[url('/images/special-products-bg.jpg')] bg-[100%_auto] lg:bg-cover flex-col items-center py-12 flex"
+      class="bg-[url('/images/bg-m2.webp')] lg:bg-[url('/images/special-products-bg.webp')] bg-cover flex-col items-center py-12 flex"
     >
       <h2 class="text-white font-bold text-3xl">SPECIAL PRODUCTS</h2>
 
@@ -174,7 +174,7 @@
         TESTIMONIALS
       </div>
       <div
-        class="h-[350px] bg-[url(/images/testimonials-bg.png)] bg-center bg-cover"
+        class="h-[350px] bg-[url(/images/testimonials-bg-sm.webp)] lg:bg-[url(/images/testimonials-bg.webp)] bg-center bg-cover"
       >
         <carousel-2 />
       </div>

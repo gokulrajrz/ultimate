@@ -7,7 +7,7 @@
       <div class="flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-2-1.jpeg"
+            src="/images/about-2-1.webp"
             alt="Industries"
             class="rounded-10"
             height="306px"
@@ -44,7 +44,7 @@
       <div class="flex lg:hidden justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-3-1.jpeg"
+            src="/images/about-3-1.webp"
             class="rounded-10"
             alt="Industries"
             height="306px"
@@ -78,7 +78,7 @@
       <div class="hidden lg:flex justify-center items-center lg:w-fit">
         <div class="w-[373px] lg:max-w-[373px]">
           <v-img
-            src="/images/about-3-1.jpeg"
+            src="/images/about-3-1.webp"
             class="rounded-10"
             height="306px"
             alt="Industries"
