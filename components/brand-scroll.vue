@@ -1,13 +1,15 @@
 <template>
   <div class="infinity-scroll-container w-full overflow-hidden">
     <div class="infinity-scroll-inner w-max flex flex-nowrap gap-5">
-      <div
-        v-for="(img, i) in imgs"
-        :key="i"
-        class="flex items-center justify-center"
-      >
-        <img :src="img" width="150px" alt="Brand image" />
-      </div>
+      <template v-for="i in 2" :key="i">
+        <div
+          v-for="(img, index) in imgs"
+          :key="`brand-${i}-${index}`"
+          class="flex items-center justify-center"
+        >
+          <img :src="img" width="150" height="auto" alt="Brand image" loading="lazy" />
+        </div>
+      </template>
     </div>
   </div>
 </template>
@@ -16,10 +18,6 @@
 const props = defineProps<{
   imgs: string[];
 }>();
-
-const imgs = [...props.imgs, ...props.imgs];
-
-// console.log(imgs);
 </script>
 
 <style scoped>
@@ -28,16 +26,15 @@ const imgs = [...props.imgs, ...props.imgs];
 }
 
 .infinity-scroll-inner {
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {
   from {
-    transform: translate(0%);
+    transform: translateX(0%);
   }
-
   to {
-    transform: translate(calc(-50% - 10px));
+    transform: translateX(-50%);
   }
 }
 </style>
