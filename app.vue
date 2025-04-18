@@ -3,9 +3,19 @@
     <!-- Loader Screen -->
     <div
       v-if="isPageLoading"
-      class="fixed inset-0 bg-black bg-opacity-50 z-[30] flex items-center justify-center"
+      class="fixed inset-0 bg-white z-[30] flex flex-col items-center justify-center"
     >
-      <div class="loader"></div>
+      <div class="scale-in-center">
+        <v-img
+          src="/images/ultimate_logo.png"
+          width="180"
+          alt="Ultimate Equipments Logo"
+          class="mb-8"
+        />
+      </div>
+      <div class="circular-loader">
+        <div class="circular-loader-inner"></div>
+      </div>
     </div>
 
     <v-app class="bg-white relative" v-show="!isPageLoading">
@@ -178,21 +188,68 @@ onMounted(() => {
 
 <style>
 /* Loader styles */
-.loader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
+.circular-loader {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
+  position: relative;
+  animation: rotate 1s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
+.circular-loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 3px solid #f3f3f3;
+  animation: prixClipFix 2s linear infinite;
+}
+
+.circular-loader-inner {
+  border: 3px solid transparent;
+  border-top-color: #C6282E;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.scale-in-center {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 </style>
