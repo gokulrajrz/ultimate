@@ -1,12 +1,23 @@
 <template>
   <div class="infinity-scroll-container w-full overflow-hidden">
-    <div class="infinity-scroll-inner w-max flex flex-nowrap gap-5">
-      <div
-        v-for="(img, i) in imgs"
-        :key="i"
-        class="flex items-center justify-center"
-      >
-        <img :src="img" width="150px" alt="company logo"/>
+    <div class="scroll-track">
+      <!-- First set of logos -->
+      <div class="scroll-content">
+        <div
+          v-for="(img, i) in imgs"
+          :key="i"
+          class="logo-tile"
+          :style="{ backgroundImage: `url(${img})` }"
+        />
+      </div>
+      <!-- Repeated for seamless loop -->
+      <div class="scroll-content">
+        <div
+          v-for="(img, i) in imgs"
+          :key="'clone-' + i"
+          class="logo-tile"
+          :style="{ backgroundImage: `url(${img})` }"
+        />
       </div>
     </div>
   </div>
@@ -17,27 +28,52 @@ const props = defineProps<{
   imgs: string[];
 }>();
 
-const imgs = [...props.imgs, ...props.imgs];
-
-// console.log(imgs);
+const imgs = props.imgs;
 </script>
 
 <style scoped>
 .infinity-scroll-container {
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
 }
 
-.infinity-scroll-inner {
-  animation: scroll 90s linear infinite;
+.scroll-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
 }
 
+.scroll-content {
+  display: flex;
+  gap: 1.25rem; /* gap-5 */
+}
+
+.logo-tile {
+  width: 150px;
+  height: 80px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
 @keyframes scroll {
   from {
-    transform: translate(0%);
+    transform: translateX(0%);
   }
-
   to {
-    transform: translate(calc(-50% - 10px));
+    transform: translateX(-50%);
   }
 }
 </style>
