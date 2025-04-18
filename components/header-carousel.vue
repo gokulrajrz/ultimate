@@ -34,19 +34,19 @@ const items = ref([
   {
     title: "Power tools & pneumatic tools",
     desc: "We are one among the largest distributors of quality professional tools.",
-    img: ["/images/banner/banner-2.webp", "/images/banner/bm-2.jpeg"],
+    img: ["/images/banner/banner-2.webp", "/images/banner/bm-2.webp"],
     link: "/service/Power-Tools&Pneumatic-Tools",
   },
   {
     title: "Engineering & hand tools",
     desc: "We cater from a vast list of Engineering & Hand Tools.",
-    img: ["/images/banner/banner-3.webp", "/images/banner/bm-3.jpeg"],
+    img: ["/images/banner/banner-3.webp", "/images/banner/bm-3.webp"],
     link: "/service/Engineering&Hand-Tools",
   },
   {
     title: "OUR BRANDS & CLIENTS",
     desc: "",
-    img: ["/images/banner/banner-4.webp", "/images/banner/bm-4.jpeg"],
+    img: ["/images/banner/banner-4.webp", "/images/banner/bm-4.webp"],
     link: "/brands",
   },
 ]);
