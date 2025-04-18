@@ -138,11 +138,11 @@ onMounted(() => {
 
     <!-- Bouncing arrow using CSS animation -->
     <div
-      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
+      class="absolute bottom-6 left-1/2 z-10 animate-bounce"
     >
       <img
-        src="https://cdn.jsdelivr.net/npm/@mdi/svg/svg/chevron-down.svg"
-        class="w-8 h-8"
+        src="/icons/ArrowDown.svg"
+        class="w-8 h-8 translate-x-[-50%]"
         :class="[currentSlide === items.length - 1 ? '' : 'filter invert']"
         alt="Scroll Down"
       />
