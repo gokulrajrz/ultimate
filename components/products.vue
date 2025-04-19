@@ -60,7 +60,13 @@
                 class="border-primary-color min-w-[126px] h-[226px] border-[1px]"
               ></div>
               <div class="w-[210px] h-[186px] mt-5 -ml-[106px]">
-                <v-img :src="pdt.img" cover height="186" width="210" :alt="pdt.name"/>
+                <v-img
+                  :src="pdt.img"
+                  cover
+                  height="186"
+                  width="210"
+                  :alt="pdt.name"
+                />
               </div>
               <div class="ml-10">
                 <div class="text-[26px] font-medium mt-5">
@@ -70,11 +76,11 @@
                   {{ pdt.desc }}
                 </div>
                 <NuxtLink :to="`/service/${pdt.id}`">
-                  <v-btn
-                    class="mt-5 rounded-btn px-3 py-[10px] text-none"
-                    variant="flat"
-                    color="primary"
-                    >View More</v-btn>
+                  <div
+                    class="mt-5 rounded-btn px-3 py-[10px] text-white w-max bg-primary-color"
+                  >
+                    View More
+                  </div>
                 </NuxtLink>
               </div>
             </div>
