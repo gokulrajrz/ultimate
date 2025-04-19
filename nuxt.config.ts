@@ -26,6 +26,13 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
+      link: [
+        {
+          rel: 'preload',
+          as: 'style',
+          href: '/_nuxt/entry.css',
+        }
+      ]
     },
   },
 
@@ -59,6 +66,19 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    build: {
+      cssCodeSplit: true,
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          },
+        },
+      },
+    },
   },
 
   css: ["~/assets/css/main.scss"],
@@ -74,4 +94,9 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+
+  experimental: {
+    inlineSSRStyles: true,
+    renderJsonPayloads: true,
+  }
 });

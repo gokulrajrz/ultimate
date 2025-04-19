@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-creative";
 
 const swiperInstance = ref<any>(null);
 const currentSlide = ref(0);
@@ -76,8 +73,6 @@ onMounted(() => {
       <SwiperSlide v-for="(item, i) in items" :key="i">
         <div class="section-header relative">
           <div class="w-100 h-100 absolute">
-            <!-- <img class="lg:hidden h-100 w-100" :src="item.img[1]" :alt="item.title" />
-            <img class="hidden lg:block h-100 w-100" :src="item.img[0]" :alt="item.title"/> -->
             <NuxtImg
               :src="item.img[1]"
               :alt="item.title"
@@ -151,10 +146,24 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* Critical CSS inline */
+.section-header {
+  height: calc(100vh - 100px);
+  contain: layout style; /* Improve paint performance */
+}
+
+@media (max-width: 1023px) {
+  .section-header {
+    height: calc(100vh - 70px);
+  }
+}
+
+/* Optimize animation performance */
 @keyframes bounce {
   0%,
   100% {
     transform: translateY(0);
+    will-change: transform;
   }
   50% {
     transform: translateY(10px);
@@ -163,15 +172,6 @@ onMounted(() => {
 
 .animate-bounce {
   animation: bounce 1.5s infinite ease-in-out;
-}
-
-.section-header {
-  height: calc(100vh - 100px);
-}
-
-@media (max-width: 1023px) {
-  .section-header {
-    height: calc(100vh - 70px);
-  }
+  will-change: transform;
 }
 </style>
